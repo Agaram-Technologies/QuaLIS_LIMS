@@ -15,5 +15,17 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="lib" path="Jar/Jar/log4j-1.2.17.jar"/>
 	<classpathentry kind="lib" path="Jar/Jar/selenium-server-standalone-3.141.59.jar"/>
+	<classpathentry kind="lib" path="Jar/Jar/commons-codec-1.15.jar"/>
+	<classpathentry kind="lib" path="Jar/Jar/commons-collections4-4.4.jar"/>
+	<classpathentry kind="lib" path="Jar/Jar/commons-math3-3.6.1.jar"/>
+	<classpathentry kind="lib" path="Jar/Jar/poi-5.0.0.jar"/>
+	<classpathentry kind="lib" path="Jar/Jar/poi-examples-5.0.0.jar"/>
+	<classpathentry kind="lib" path="Jar/Jar/poi-excelant-5.0.0.jar"/>
+	<classpathentry kind="lib" path="Jar/Jar/poi-integration-5.0.0.jar"/>
+	<classpathentry kind="lib" path="Jar/Jar/poi-ooxml-5.0.0.jar"/>
+	<classpathentry kind="lib" path="Jar/Jar/poi-ooxml-full-5.0.0.jar"/>
+	<classpathentry kind="lib" path="Jar/Jar/poi-ooxml-lite-5.0.0.jar"/>
+	<classpathentry kind="lib" path="Jar/Jar/poi-scratchpad-5.0.0.jar"/>
+	<classpathentry kind="lib" path="Jar/Jar/SparseBitSet-1.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

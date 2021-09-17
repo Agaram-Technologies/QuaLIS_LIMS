@@ -3,8 +3,6 @@ package Configuration;
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
-import java.io.IOException;
-import java.net.URISyntaxException;
 import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
 
@@ -22,10 +20,11 @@ public class TestCoverageFTPConfiguration extends BrowserOperation{
 	
 	
 	
-	public static void FTP() throws InterruptedException, AWTException, URISyntaxException, IOException 
+	public static void FTP() throws InterruptedException, AWTException 
 	{
-		BrowserOperation.configProperties();
+		HashMap<String, String> ftp;
 		
+	
 		PageFactory.initElements(driver, ElementFTPConfiguration.class);
 		
 		ElementFTPConfiguration.masterIcon.click();
@@ -58,7 +57,12 @@ public class TestCoverageFTPConfiguration extends BrowserOperation{
 		
 		ElementFTPConfiguration.FTPPassword.sendKeys(FTPPassword);
 		
-	
+		
+		/*WebElement site=ElementFTPConfiguration.FTPSiteName;
+		
+		Select siteSelect=new Select(site);
+		
+		siteSelect.selectByVisibleText("Kampala");	*/
 		
 		ElementFTPConfiguration.FTPHostName.sendKeys(FTPHost);
 		

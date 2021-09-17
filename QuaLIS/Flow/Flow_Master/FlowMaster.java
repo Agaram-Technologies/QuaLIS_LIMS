@@ -6,7 +6,18 @@ import java.awt.AWTException;
 import java.io.IOException;
 import java.net.URISyntaxException;
 
+import BaseMaster.TestCoverageContainerType;
+import CheckList.TestCoverageQB;
+import Config.ParameterType;
+import Configuration.TestCoverageApprovalConfiguration;
+import Configuration.TestCoverageFTPConfiguration;
+import Configuration.TestCoverageTemplateMaster;
+import Configuration.TestCoverageUserRoleTemplate;
 import Flow.TestDataFlow;
+import Flow.TestDataHylands;
+import FlowMethod.MasterMethod;
+import Organisation.TestCoverageNestedFlowMapping;
+import UserManagement.TestCoverageUser;
 import Utility.BasicOperation;
 import Utility.BrowserOperation;
 
@@ -19,36 +30,13 @@ public class FlowMaster extends TestDataFlow
 		
 		BrowserOperation.launchLIMS();
 		
-//		TestCoverageFTPConfiguration.FTP();	
-		
-/*			
-	//	TestCoverageUserRoleTemplate.userRoleTemplateCOMNICA(userRole);
-		
-		TestCoverageApprovalConfiguration.domnica(true);
-		
-		TestCoverageNestedFlowMapping.DOMNICA(approver, reviewer, analyst);
-	
-		BasicOperation.timeValue();
-		
-		
-		
-		MasterMethod.test(testCategory, unit, approvalApprovalTest, section, method, instrumentCategory, parameterType, checklist, price, parameter, roundingDigits);
-		
-		TestCoverageUserRoleTemplate.userRoleTemplateHYLANDS(userRole);
-		
-		TestCoverageApprovalConfiguration.hylands(true);
-		
-		TestCoverageNestedFlowMapping.HYLANDS(approver, reviewer, analyst);
-	
-		
-		TestCoverageFTPConfiguration.FTP(ProjectDetail.hylands);		
-		
-	
+		TestCoverageFTPConfiguration.FTP();	
+
 		MasterMethod.designation(designation, description);
 
 		MasterMethod.department(department, description);
 
-		MasterMethod.country(country, "1", "1", "1");
+		MasterMethod.country(country, countryAbbreviation, countryTwoChar, countryThreeChar);
 
 		MasterMethod.section(section, description);
 
@@ -74,18 +62,18 @@ public class FlowMaster extends TestDataFlow
 		
 		MasterMethod.passwordPolicyApproval(approver);
 
-		TestCoverageUser.userAdd(analystLoginID, analystFirstName, lastName, analystSignature, "email@gmail.com", "B.E",
-				"AB", address, designation, department, country);
+		TestCoverageUser.userAdd(analystLoginID, analystFirstName, lastName, analystSignature,mail, qualification,
+				bloodGroup, address, designation, department, country);
 
 		TestCoverageUser.userUserRoleAdd(reviewerLoginID, analyst);
  
-		 TestCoverageUser.userAdd(reviewerLoginID, reviewerFirstName, lastName, reviewerSignature, "email@gmail.com",
-				"B.E", "AB", address, designation, department, country);
+		 TestCoverageUser.userAdd(reviewerLoginID, reviewerFirstName, lastName, reviewerSignature, mail,
+				 qualification, bloodGroup, address, designation, department, country);
 
 		TestCoverageUser.userUserRoleAdd(reviewerLoginID, reviewer);
 
-		TestCoverageUser.userAdd(approverLoginID, approverFirstName, lastName, approverSignature, "email@gmail.com",
-				"B.E", "AB", address, designation, department, country);
+		TestCoverageUser.userAdd(approverLoginID, approverFirstName, lastName, approverSignature, mail,
+				qualification, bloodGroup, address, designation, department, country);
 
 		TestCoverageUser.userUserRoleAdd(approverLoginID, approver);
 
@@ -135,50 +123,18 @@ public class FlowMaster extends TestDataFlow
 
 		MasterMethod.instrument(instrument, instrumentCategory, description, supplier, windowPeriodUnit,
 				instrumentIncharge, instrumentStatusActive, section, manufacture,true);
-	MasterMethod.QBCategory(QBCategory, description);
+		
+		MasterMethod.QBCategory(QBCategory, description);
 
 		TestCoverageQB.QB(QBCategory);
 
 		MasterMethod.checkList(checkList, description, QBCategory);
 		
 		MasterMethod.testCategory(testCategory, description);
-		
-		MasterMethod.test(testCategory, unit, approvalApprovalTest, section, method, instrumentCategory, ParameterType.numeric, "NA", price, parameter, roundingDigits);
-
-		TestCoverageTemplateMaster.templateMasterInstrument(instrumentCategory, firstField);
-		
-		TestCoverageUserRoleTemplate.userRoleTemplateHYLANDS(userRole);
-		
-		TestCoverageApprovalConfiguration.hylands(true);
-		
-		TestCoverageNestedFlowMapping.HYLANDS(approver, reviewer, analyst);
-		
-		TestCoverageApprovalConfiguration.hylands(false);
-		
-		TestCoverageApprovalConfiguration.testGroup();
-			
-		TestCoverageUserRoleTemplate.userRoleTemplateHYLANDS(userRole);
-		
-		TestCoverageApprovalConfiguration.hylands(true);
-		
-		TestCoverageNestedFlowMapping.HYLANDS(approver, reviewer, analyst);
-	 		
 	
-			MasterMethod.instrumentCategory(instrumentCategory, technique, description);
-			
 		
-				MasterMethod.instrument(instrument+i+1, "Serology", description, "Coolpoint", windowPeriodUnit,
-						"Pravin Kore", instrumentStatusActive, "Sample Registration", "Tarson", false);
-			
-			 
+		
 
-
-				
-		//
-		
-		MasterMethod.testGroup(sample, sampleCategory, sampleCategory, sampleCategory, "ic001", testCategory);
-		
-*/
 	}
 
 }

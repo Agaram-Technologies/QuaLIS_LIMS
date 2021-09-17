@@ -240,6 +240,8 @@ public class BrowserOperation
 	public static void launchLIMS() throws URISyntaxException, IOException
 	{
 		
+		
+		
 		launchBrowser();
 		
 		configProperties();
@@ -277,13 +279,19 @@ public class BrowserOperation
 			loginButton.click();
 
 		}
-		
-			
-					
+							
 	}
 
 
 	public static void refreshLoginAdmin() {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	public static void implicitWait(int i) {
+		
+		driver.manage().timeouts().implicitlyWait(i, TimeUnit.SECONDS);
 		// TODO Auto-generated method stub
 		
 	}

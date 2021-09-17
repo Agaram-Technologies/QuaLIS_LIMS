@@ -3,6 +3,7 @@ package Configuration;
 import java.io.IOException;
 
 
+
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -62,7 +63,7 @@ public class TestCoverageApprovalConfiguration extends BrowserOperation
 		}
 		
 	}
-	/*	public static void domnica(boolean autoJobAllot) throws InterruptedException
+	/*public static void domnica(boolean autoJobAllot) throws InterruptedException
 	{
 		
 		
@@ -70,7 +71,7 @@ public class TestCoverageApprovalConfiguration extends BrowserOperation
 		
 		if(autoJobAllot==true)
 		{
-			TestCoverageApprovalConfiguration.registrationType(RegistrationDetail., true, false, "a", "a", "a");
+			TestCoverageApprovalConfiguration.registrationType(RegistrationDetail.dominica, true, false, "a", "a", "a");
 			
 			}
 		else
@@ -82,8 +83,8 @@ public class TestCoverageApprovalConfiguration extends BrowserOperation
 		}
 		
 	}
-	
-		*/
+	*/
+		
 
 	/*public static void JPDC(boolean autoJobAllot) throws InterruptedException
 	{

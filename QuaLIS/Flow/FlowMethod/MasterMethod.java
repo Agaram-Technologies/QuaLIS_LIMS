@@ -4730,7 +4730,7 @@ rob.keyPress(KeyEvent.VK_ENTER);
 
 		wait1.until(ExpectedConditions.elementToBeClickable(ElementSupplier.supplierMaterialCategoryAction));
 		
-		ElementSupplier.supplierFileIcon.click();
+/*		ElementSupplier.supplierFileIcon.click();
 		
 		
 
@@ -4749,12 +4749,12 @@ rob.keyPress(KeyEvent.VK_ENTER);
 		
 		Thread.sleep(5000);
 		
-	/*	String file=File.file;
+		String file=File.file;
 		
 		StringSelection fileLocation=new StringSelection(file);
 		
 		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(fileLocation, null);
-		*/
+		
 		
 		Robot rob=new Robot();
 		
@@ -4767,7 +4767,7 @@ rob.keyPress(KeyEvent.VK_ENTER);
 		rob.keyRelease(KeyEvent.VK_CONTROL);
 		
 		
-rob.keyPress(KeyEvent.VK_ENTER);
+		rob.keyPress(KeyEvent.VK_ENTER);
 		
 		rob.keyRelease(KeyEvent.VK_ENTER);
 		
@@ -4782,6 +4782,8 @@ rob.keyPress(KeyEvent.VK_ENTER);
 		wait1.until(ExpectedConditions.visibilityOf(ElementSupplier.supplierFileAction));
 
 		wait1.until(ExpectedConditions.elementToBeClickable(ElementSupplier.supplierFileAction));
+		
+		*/
 		
 		ElementSupplier.supplierSupplierIcon.click();
 		
@@ -5356,9 +5358,9 @@ ElementInstrument.instrumentValidationIcon.click();
 
 			}
 			
-			ElementInstrument.instrumentValidationAdd.click();;
+			ElementInstrument.instrumentValidationAdd.click();
 		
-			instrumentValidationStatusSelect.selectByIndex(0);
+			instrumentValidationStatusSelect.selectByVisibleText("Validated");
 			
 			ElementInstrument.instrumentValidationAddSubmit.click();
 			
