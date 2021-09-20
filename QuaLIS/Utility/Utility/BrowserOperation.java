@@ -59,6 +59,8 @@ public class BrowserOperation
 	
 	public static String FTPHost;
 	
+	public static String project;
+	
 	public static void configProperties() throws URISyntaxException, IOException
 	{
 			String jarPath = BrowserOperation.class.getProtectionDomain().getCodeSource().getLocation().toURI().getPath();
@@ -103,6 +105,8 @@ public class BrowserOperation
 			FTPFolder=properties.getProperty("FTPFolder");
 			
 			FTPHost=properties.getProperty("FTPHost");
+			
+			project=properties.getProperty("project");
 						
 			System.out.println(latestChromeVersion);
 			
@@ -119,6 +123,8 @@ public class BrowserOperation
 			System.out.println(FTPPassword);
 			
 			System.out.println(FTPFolder);
+			
+			System.out.println(project);
 			
  	  
 					

@@ -7,6 +7,9 @@ import org.openqa.selenium.support.FindBy;
 
 public class ElementNestedFlowMapping 
 {
+
+	@FindBy(xpath = "//*[@id=\"MenuTree\"]/li[1]/a")
+	public static WebElement homeIcon;
 	
 	@FindBy(id = "iMenuID_1")
 	public static WebElement masterIcon;
@@ -17,7 +20,9 @@ public class ElementNestedFlowMapping
 	@FindBy(id = "iFormID_192")
 	public static WebElement nestefFlowMappingIcon;
 
-	
+	@FindBy(xpath= "//*[@id=\"idTabHeader\"]")
+	public static WebElement nestefFlowMappingTabIcon;
+
 	
 	@FindBy(id = "ID_UM_SiteCombo")
 	public static WebElement filterSite;
@@ -48,19 +53,15 @@ public class ElementNestedFlowMapping
 
 	@FindBy(xpath = "//*[@id=\"ID_UM_rightmenu\"]/a")
 	public static WebElement nestedFlowMappingAction;
-	
-	
+		
 	@FindBy(xpath = "//*[@id=\"ID_UM_Tabs\"]/a")
 	public static List<WebElement> nestedFlowMappingUserRoleList;
 	
-
 	@FindBy(id = "ID_UM_UserMapping_add")
 	public static WebElement nestedFlowMappingAdd;
 	
 	@FindBy(id = "ID_UM_UserMapping_delete")
 	public static WebElement nestedFlowMappingDelete;
-
-
 	
 	@FindBy(xpath= "//*[contains(@id,'ID_UM_AvailListContents')]/button")
 	public static WebElement nestedFlowMappingViewUsers;
@@ -73,36 +74,24 @@ public class ElementNestedFlowMapping
 	
 	@FindBy(id = "ID_UM_UserMapadd_cancel")
 	public static WebElement nestedFlowMappingAddCancel;
+		                                     
+	@FindBy(xpath = "//*[@id=\"ID_UM_UserMapgetdiv_4\"]/div/div[1]/div[2]/p")
+	public static List<WebElement> gridUserNameThirdLevelList;
+	
+	@FindBy(xpath = "//*[@id=\"ID_UM_UserMapgetdiv_3\"]/div/div[1]/div[2]/p")
+	public static List<WebElement> gridUserNameSecondLevelList;
+	
+	@FindBy(xpath = "//*[@id=\"ID_UM_UserMapgetdiv_2\"]/div/div[1]/div[2]/p")
+	public static List<WebElement> gridUserNameFirstLevelList;
 	
 	
-	@FindBy(xpath = "//*[@id=\"ID_UM_UserMapgetdiv_8\"]/div/div[1]/div[2]/p")
-	public static List<WebElement> gridUserList;
+	@FindBy(xpath = "//*[@id=\"ID_APC_ListDiv_192_4\"]/li")
+	public static List<WebElement> userThirdLevelList;
 	
+	@FindBy(xpath = "//*[@id=\"ID_APC_ListDiv_192_3\"]/li")
+	public static List<WebElement> userSecondLevelList;
 	
+	@FindBy(xpath = "//*[@id=\"ID_APC_ListDiv_192_2\"]/li")
+	public static List<WebElement> userFirstLevelList;
 	
-	
-	@FindBy(xpath = "//*[contains(@id,'ID_UM_UserMapgetdiv')]/div/div[2]")
-	public static List<WebElement> gridCheckboxList;
-	
-	/*
-
-	@FindBy(xpath = "//*[@id=\"ID_APC_ListDiv_192_5\"]/li/p")
-	public static List<WebElement> userList;
-	*/
-
-	@FindBy(xpath = "//*[contains(@id,'ID_APC_ListDiv')]/li/p")
-	public static List<WebElement> userList;
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
 }

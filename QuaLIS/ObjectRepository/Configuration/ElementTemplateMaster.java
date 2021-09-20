@@ -5,14 +5,19 @@ import org.openqa.selenium.support.FindBy;
 
 public class ElementTemplateMaster {
 	
-
+	 
+	@FindBy(xpath="//*[@id=\"MenuTree\"]/li[1]/a")
+	public static WebElement homeIcon;
+	
 
 	@FindBy(id="iMenuID_1")
 	public static WebElement masterIcon;
 	
  	@FindBy(id="iModuleID_31")
 	public static WebElement configurationIcon;
- 	
+
+	@FindBy(xpath="//*[@id=\"ID_TMD_TemplateMasterData\"]")
+	public static WebElement templateMasterTabIcon;
  	
 
 	@FindBy(id="ID_TMD_SampleTypeCombo")
@@ -29,21 +34,7 @@ public class ElementTemplateMaster {
  	
  	
 	@FindBy(id="ID_TMD_SampleTypeCombo")
-	public static WebElement templateMasterFilterSampleCategory;
-/*
-	@FindBy(xpath="//*[@id=\"ID_TMD_ApprovalSubTypeCombo\"]")
-	public static WebElement templateMasterFilterSampleTypeProduct;
-	
-	@FindBy(xpath="//*[@id=\"ID_TMD_ApprovalSubTypeCombo\"]/option[2]")
-	public static WebElement templateMasterFilterSampleTypeInstrument;
-
-	@FindBy(xpath="//*[@id=\"ID_TMD_ApprovalSubTypeCombo\"]/option[3]")
-	public static WebElement templateMasterFilterSampleTypeMaterial;
-
-	@FindBy(xpath="//*[@id=\"ID_TMD_ApprovalSubTypeCombo\"]/option[4]")
-	public static WebElement templateMasterFilterSampleTypeStorageCategory;
-
-*/
+	public static WebElement templateMasterFilterSampleCategory; 
  
 
 	@FindBy(id="ID_TMD_SampleTypeCombo")

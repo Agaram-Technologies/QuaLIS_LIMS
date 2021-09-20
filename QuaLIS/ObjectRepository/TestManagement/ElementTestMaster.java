@@ -380,10 +380,10 @@ public class ElementTestMaster {
 	@FindBy(id = "ID_TM_TestUnit")
 	public static WebElement testUnit;
 
-	@FindBy(id = "ID_TM_TP_CodedResultinput")
+	@FindBy(id = "ID_TM_TestCodedResultInput")
 	public static WebElement testParameterCodedResult;
 
-	@FindBy(id = "ID_TM_TP_ActualResult")
+	@FindBy(xpath = "//*[@id=\"ID_TM_TestActualResult\"]")
 	public static WebElement testParameterActualResult;
 	
 	

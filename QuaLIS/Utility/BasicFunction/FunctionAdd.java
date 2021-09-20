@@ -24,42 +24,38 @@ public class FunctionAdd extends ElementName {
 	public static void addAllField(HashMap <String, String> value, HashMap< String, WebElement> element) throws InterruptedException
 	{
 		
-				
-		String name=value.get(TestDataName.nameAdd);
-		
-		String description=value.get(TestDataName.descriptionAdd);
-	
-		element.get(module).click();
-		
-		element.get(ElementName.subModule).click();
-		
-		element.get(ElementName.screen).click();
-		
-		
-		   element.get(ElementName.tabHeader).click();
-			
-			BasicOperation.exception(element.get(ElementName.action));
-			
-			element.get(ElementName.add).click();
-			
-			BasicOperation.exception(element.get(ElementName.nameValue));
-					
-			element.get(ElementName.nameValue).sendKeys(name);
-			
-			element.get(ElementName.descriptionValue).sendKeys(description);
-			
-			element.get(ElementName.addSubmitButton).click();
-			
-			BasicOperation.wait(element.get(ElementName.action));
-			
-			element.get(ElementName.home).click();
-			
-			element.get(ElementName.subModule).click();
+		String name = value.get(TestDataName.nameAdd);
 
-			element.get(ElementName.module).click();
-	  
-		
-		
+		String description = value.get(TestDataName.descriptionAdd);
+
+		element.get(module).click();
+
+		element.get(ElementName.subModule).click();
+
+		element.get(ElementName.screen).click();
+
+		element.get(ElementName.tabHeader).click();
+
+		BasicOperation.exception(element.get(ElementName.action));
+
+		element.get(ElementName.add).click();
+
+		BasicOperation.exception(element.get(ElementName.nameValue));
+
+		element.get(ElementName.nameValue).sendKeys(name);
+
+		element.get(ElementName.descriptionValue).sendKeys(description);
+
+		element.get(ElementName.addSubmitButton).click();
+
+		BasicOperation.wait(element.get(ElementName.action));
+
+		element.get(ElementName.subModule).click();
+
+		element.get(ElementName.module).click();
+
+		element.get(ElementName.home).click();
+
 	}
 	
 	public static void addMandatoryField(HashMap <String, String> value, HashMap< String, WebElement> element) throws InterruptedException

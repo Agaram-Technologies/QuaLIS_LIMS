@@ -7,24 +7,21 @@ public class ElementUserRoleTemplate {
 
 	@FindBy(id = "iMenuID_1")
 	public static WebElement masterIcon;
+	
+
+	 
+	@FindBy(xpath="//*[@id=\"MenuTree\"]/li[1]/a")
+	public static WebElement homeIcon;
 
 	@FindBy(id = "iModuleID_31")
 	public static WebElement configurationIcon;
 
 	@FindBy(id = "iFormID_58")
 	public static WebElement userRoleTemplateIcon;
+ 
 	
-/*	
-	@FindBy(id = "Test Group Approval")
-	public static WebElement approvalTypeTestGroup;
-
-*/	/*@FindBy(id = "iModuleID_31")
-	public static WebElement configurationIcon;
-
-	@FindBy(id = "iFormID_58")
-	public static WebElement userRoleTemplateIcon;
-*/	
-	
+	@FindBy(xpath = "//*[@id=\"ID_URT_TemplateMasterData\"]")
+	public static WebElement userRoleTemplateTabIcon;
 	
 	@FindBy(id = "ID_URT_ApprovalSubTypeCombo")
 	public static WebElement userRoleTemplateFilterApprovalType;

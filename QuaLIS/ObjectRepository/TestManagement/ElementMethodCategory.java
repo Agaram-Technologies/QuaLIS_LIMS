@@ -128,7 +128,7 @@ public class ElementMethodCategory  extends ElementName
 		
 		element.put(editSubmitButton, methodCategoryEditSubmit);
 		
-		element.put(tabHeader, testManagementIcon);
+		element.put(tabHeader, methodCategoryTabIcon);
 		
 		element.put(home, homeIcon);
 		

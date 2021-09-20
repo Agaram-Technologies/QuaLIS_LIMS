@@ -69,7 +69,20 @@ import UserManagement.ElementProfile;
 
 public class BasicOperation extends BrowserOperation{
 
-
+	public static void selectTextFromList(List<WebElement>list,String text)
+	{
+		for(WebElement element:list)
+		{
+			if(element.getText().equals(text))
+			{
+				element.click();
+			}
+			else
+			{
+				System.out.println("Test value is not matched in the Grid");
+			}
+		}
+	}
 	public static String jarPath(String className) throws URISyntaxException, ClassNotFoundException
 	{
 		Class c=Class.forName(className);  

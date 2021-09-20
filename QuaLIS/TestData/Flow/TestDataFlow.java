@@ -2,7 +2,12 @@ package Flow;
 
 import java.util.HashMap;
 
+import Attribute.AttributeTestMaster;
+import Attribute.AttributeUserRoleTemplate;
 import Config.TestDataName;
+import Settings.ApprovalSubType;
+import Settings.ParameterType;
+import Settings.RegistrationTypeDetail;
 import Utility.BasicOperation;
 import Utility.BrowserOperation;
 
@@ -616,7 +621,7 @@ public class TestDataFlow extends BrowserOperation
 	
 	public static String userRoleTemplateMaterial="Material Template";
 	
-	public static String firstField="one";
+	public static String firstField="Item Code";
 	public static String instrumentStatusActive="Active";
 	
 	public static String firstName="First";
@@ -802,7 +807,96 @@ public static String methodCategory="Fuel Method Category";
 
 public static String method="Fuel Test Method";
 
-public static String test="Fuel Test";
+public static String testNumericCheckListNA="Fuel Test num chna 001";
+
+public static String testCharacterCheckListNA="Fuel Test ch chna 001";
+
+public static String testAttachmentCheckListNA="Fuel Test at chna 001";
+
+public static String testPreDefinedCheckListNA="Fuel Test pre chna 001";
+
+public static String testNumericCheckList="Fuel Test ch ch 001";
+
+public static String testCharacterCheckList="Fuel Test at ch 001";
+
+public static String testAttachmentCheckList="Fuel Test num ch 001";
+
+public static String testPreDefinedCheckList="Fuel Test pre ch 001";
+
+
+
+public static HashMap<String,String> numericParameter()
+{
+	HashMap<String, String> value=new HashMap<String, String>();
+	
+	value.put(AttributeTestMaster.parameterName, parameter);
+	
+	value.put(AttributeTestMaster.parameterType, ParameterType.numeric);
+	
+	value.put(AttributeTestMaster.parameterAbbreviation, parameter+" abb");
+	
+	value.put(AttributeTestMaster.parameterRoundingDigit, roundingDigit);
+	
+	value.put(AttributeTestMaster.parameterUnit, unit);
+		
+	return value;	
+}
+
+public static HashMap<String,String> attachmentParameter()
+{
+	HashMap<String, String> value=new HashMap<String, String>();
+	
+	value.put(AttributeTestMaster.parameterName, parameter);
+	
+	value.put(AttributeTestMaster.parameterType, ParameterType.attachment);
+	
+	value.put(AttributeTestMaster.parameterAbbreviation, parameter+" abb");
+		
+	return value;	
+}
+
+
+public static HashMap<String,String> preDefinedParameter()
+{
+	HashMap<String, String> value=new HashMap<String, String>();
+	
+	value.put(AttributeTestMaster.parameterType, ParameterType.preDefined);
+	
+	value.put(AttributeTestMaster.parameterName, parameter);
+	
+	value.put(AttributeTestMaster.parameterAbbreviation, parameter+" abb");
+	
+	value.put(AttributeTestMaster.parameterActualResult, PreDefinedParameterActualResult.BDL);
+	
+	value.put(AttributeTestMaster.parameterCodedResult, "BDO coded");
+		
+	return value;	
+}
+
+public static HashMap<String,String> characterParameter()
+{
+	HashMap<String, String> value=new HashMap<String, String>();
+	
+	value.put(AttributeTestMaster.parameterName, parameter);
+	
+	value.put(AttributeTestMaster.parameterAbbreviation, parameter+" abb");
+	
+	value.put(AttributeTestMaster.parameterType, ParameterType.character);
+		
+	return value;	
+}
+
+
+
+
+
+
+
+
+
+
+
+public static String roundingDigit="5";
 
 public static String price="100";
 
@@ -948,7 +1042,6 @@ public static String aprovalReleaseSampleType="ARE St cmts 1";
 	
 	
 	public static String analystFirstName="First";
-
 	
 	public static String reviewerFirstName="Second";
 	
@@ -961,13 +1054,13 @@ public static String aprovalReleaseSampleType="ARE St cmts 1";
 	
 	public static String stabilityProtocolNumber = "SPN001";
 
-	
-	
 	public static String sampleCategory = "Fuel";
-
+	
+	public static String specificationName = "sp001";
+	
 	public static String sample = "Petrol";
 
-	public static String itemCode = "IC001";
+	public static String firstFieldValue = "field001";
 
 	public static String manufacturerSite = "Fuel Manufacture Site";
 
@@ -1016,15 +1109,269 @@ public static String aprovalReleaseSampleType="ARE St cmts 1";
 	public static String lotNumber = "LN001";
 	
 	public static String materialDescription="MD001";
-	
-	
+		
 	public static String supplierLotNumber="SLN001";
 	
 	public static String uni="cm";
 	
+	public static HashMap<String, String> userRoleTemplateTestGroup()
+	{
+		HashMap<String, String> userRoleTemplate=new HashMap<String, String>();
+		
+		userRoleTemplate.put(AttributeUserRoleTemplate.firstUserRole,reviewer);
+		
+		userRoleTemplate.put(AttributeUserRoleTemplate.secondUserRole,approver);
+		
+		userRoleTemplate.put(AttributeUserRoleTemplate.templateName,"Test Group");
+			
+		userRoleTemplate.put(AttributeUserRoleTemplate.approvalSubType,ApprovalSubType.testGroupApproval);
+		
+		return userRoleTemplate;
+		
+	}
+	
+	public static HashMap<String, String> userRoleTemplateInstrument()
+	{
+		HashMap<String, String> userRoleTemplate=new HashMap<String, String>();
+		
+		userRoleTemplate.put(AttributeUserRoleTemplate.firstUserRole,approver);
+		
+		userRoleTemplate.put(AttributeUserRoleTemplate.secondUserRole,reviewer);
+		
+		userRoleTemplate.put(AttributeUserRoleTemplate.templateName,RegistrationTypeDetail.registrationTypeInstrument);
+			
+		userRoleTemplate.put(AttributeUserRoleTemplate.approvalSubType,ApprovalSubType.registrationApproval);
+		
+		userRoleTemplate.put(AttributeUserRoleTemplate.registrationType,RegistrationTypeDetail.registrationTypeInstrument);
+						
+		userRoleTemplate.put(AttributeUserRoleTemplate.registrationTypeIDS,RegistrationTypeDetail.registrationTypeInstrumentIDS);
+		
+		userRoleTemplate.put(AttributeUserRoleTemplate.registrationSubType,RegistrationTypeDetail.registrationSubTypeInstrument);
+			
+		userRoleTemplate.put(AttributeUserRoleTemplate.registrationSubTypeIDS,RegistrationTypeDetail.registrationSubTypeInstrumentIDS);
+										
+		return userRoleTemplate;
+		
+	}
+	
+	public static HashMap<String, String> userRoleTemplateDomnica()
+	{
+		HashMap<String, String> userRoleTemplate=new HashMap<String, String>();
+		
+		userRoleTemplate.put(AttributeUserRoleTemplate.firstUserRole,approver);
+		
+		userRoleTemplate.put(AttributeUserRoleTemplate.secondUserRole,reviewer);
+			
+		userRoleTemplate.put(AttributeUserRoleTemplate.approvalSubType,ApprovalSubType.registrationApproval);
+		
+		userRoleTemplate.put(AttributeUserRoleTemplate.templateName,RegistrationTypeDetail.registrationTypeDomnicaRoutine);
+		
+		userRoleTemplate.put(AttributeUserRoleTemplate.registrationType,RegistrationTypeDetail.registrationTypeDomnicaRoutine);
+						
+		userRoleTemplate.put(AttributeUserRoleTemplate.registrationTypeIDS,RegistrationTypeDetail.registrationTypeDomnicaRoutineIDS);
+		
+		userRoleTemplate.put(AttributeUserRoleTemplate.registrationSubType,RegistrationTypeDetail.registrationSubTypeDomnicaRoutine);
+			
+		userRoleTemplate.put(AttributeUserRoleTemplate.registrationSubTypeIDS,RegistrationTypeDetail.registrationSubTypeDomnicaRoutineIDS);
+										
+		return userRoleTemplate;
+		
+	}
+	
+	public static HashMap<String, String> userRoleTemplateMaterial()
+	{
+		HashMap<String, String> userRoleTemplate=new HashMap<String, String>();
+		
+		userRoleTemplate.put(AttributeUserRoleTemplate.firstUserRole,approver);
+		
+		userRoleTemplate.put(AttributeUserRoleTemplate.secondUserRole,reviewer);
+			
+		userRoleTemplate.put(AttributeUserRoleTemplate.approvalSubType,ApprovalSubType.registrationApproval);
+		
+		userRoleTemplate.put(AttributeUserRoleTemplate.registrationType,RegistrationTypeDetail.registrationTypeMaterial);
+		
+		userRoleTemplate.put(AttributeUserRoleTemplate.templateName,RegistrationTypeDetail.registrationTypeMaterial);
 
+		userRoleTemplate.put(AttributeUserRoleTemplate.registrationTypeIDS,RegistrationTypeDetail.registrationTypeMaterialIDS);
+		
+		userRoleTemplate.put(AttributeUserRoleTemplate.registrationSubType,RegistrationTypeDetail.registrationSubTypeMaterial);
+			
+		userRoleTemplate.put(AttributeUserRoleTemplate.registrationSubTypeIDS,RegistrationTypeDetail.registrationSubTypeMaterialIDS);
+										
+		return userRoleTemplate;
+		
+	}
 	
-	
-	
+	public static HashMap<String, String> userRoleTemplatePurifiedWater()
+	{
+		HashMap<String, String> userRoleTemplate=new HashMap<String, String>();
+		
+userRoleTemplate.put(AttributeUserRoleTemplate.firstUserRole,approver);
+		
+		userRoleTemplate.put(AttributeUserRoleTemplate.secondUserRole,reviewer);		
+		userRoleTemplate.put(AttributeUserRoleTemplate.approvalSubType,ApprovalSubType.registrationApproval);
+		
+		userRoleTemplate.put(AttributeUserRoleTemplate.templateName,RegistrationTypeDetail.registrationTypeHylandsPurifiedWater);
 
+		
+		userRoleTemplate.put(AttributeUserRoleTemplate.registrationType,RegistrationTypeDetail.registrationTypeHylandsPurifiedWater);
+						
+		userRoleTemplate.put(AttributeUserRoleTemplate.registrationTypeIDS,RegistrationTypeDetail.registrationTypeHylandsPurifiedWaterIDS);
+		
+		userRoleTemplate.put(AttributeUserRoleTemplate.registrationSubType,RegistrationTypeDetail.registrationSubTypeHylandsPurifiedWater);
+			
+		userRoleTemplate.put(AttributeUserRoleTemplate.registrationSubTypeIDS,RegistrationTypeDetail.registrationSubTypeHylandsPurifiedWaterIDS);
+										
+		return userRoleTemplate;
+		
+	}
+	
+	public static HashMap<String, String> userRoleTemplateIntermediate()
+	{
+		HashMap<String, String> userRoleTemplate=new HashMap<String, String>();
+		
+userRoleTemplate.put(AttributeUserRoleTemplate.firstUserRole,approver);
+		
+		userRoleTemplate.put(AttributeUserRoleTemplate.secondUserRole,reviewer);
+			
+		
+		userRoleTemplate.put(AttributeUserRoleTemplate.templateName,RegistrationTypeDetail.registrationTypeHylandsIntermediate);
+
+		userRoleTemplate.put(AttributeUserRoleTemplate.approvalSubType,ApprovalSubType.registrationApproval);
+		
+		userRoleTemplate.put(AttributeUserRoleTemplate.registrationType,RegistrationTypeDetail.registrationTypeHylandsIntermediate);
+						
+		userRoleTemplate.put(AttributeUserRoleTemplate.registrationTypeIDS,RegistrationTypeDetail.registrationTypeHylandsIntermediateIDS);
+		
+		userRoleTemplate.put(AttributeUserRoleTemplate.registrationSubType,RegistrationTypeDetail.registrationSubTypeHylandsIntermediate);
+			
+		userRoleTemplate.put(AttributeUserRoleTemplate.registrationSubTypeIDS,RegistrationTypeDetail.registrationSubTypeHylandsIntermediateIDS);
+										
+		return userRoleTemplate;
+		
+	}
+	
+	public static HashMap<String, String> userRoleTemplateRawMaterial()
+	{
+		HashMap<String, String> userRoleTemplate=new HashMap<String, String>();
+		
+userRoleTemplate.put(AttributeUserRoleTemplate.firstUserRole,approver);
+		
+		userRoleTemplate.put(AttributeUserRoleTemplate.secondUserRole,reviewer);
+			
+		
+		userRoleTemplate.put(AttributeUserRoleTemplate.templateName,RegistrationTypeDetail.registrationTypeHylandsRawMaterial);
+
+		userRoleTemplate.put(AttributeUserRoleTemplate.approvalSubType,ApprovalSubType.registrationApproval);
+		
+		userRoleTemplate.put(AttributeUserRoleTemplate.registrationType,RegistrationTypeDetail.registrationTypeHylandsRawMaterial);
+						
+		userRoleTemplate.put(AttributeUserRoleTemplate.registrationTypeIDS,RegistrationTypeDetail.registrationTypeHylandsRawMaterialIDS);
+		
+		userRoleTemplate.put(AttributeUserRoleTemplate.registrationSubType,RegistrationTypeDetail.registrationSubTypeHylandsRawMaterial);
+			
+		userRoleTemplate.put(AttributeUserRoleTemplate.registrationSubTypeIDS,RegistrationTypeDetail.registrationSubTypeHylandsRawMaterialIDS);
+										
+		return userRoleTemplate;
+		
+	}
+	
+	public static HashMap<String, String> userRoleTemplateBulkProduct()
+	{
+		HashMap<String, String> userRoleTemplate=new HashMap<String, String>();
+		
+userRoleTemplate.put(AttributeUserRoleTemplate.firstUserRole,approver);
+		
+		userRoleTemplate.put(AttributeUserRoleTemplate.secondUserRole,reviewer);
+		userRoleTemplate.put(AttributeUserRoleTemplate.approvalSubType,ApprovalSubType.registrationApproval);
+	
+		userRoleTemplate.put(AttributeUserRoleTemplate.templateName,RegistrationTypeDetail.registrationTypeHylandsBulkProduct);
+
+		userRoleTemplate.put(AttributeUserRoleTemplate.registrationType,RegistrationTypeDetail.registrationTypeHylandsBulkProduct);
+						
+		userRoleTemplate.put(AttributeUserRoleTemplate.registrationTypeIDS,RegistrationTypeDetail.registrationTypeHylandsBulkProductIDS);
+		
+		userRoleTemplate.put(AttributeUserRoleTemplate.registrationSubType,RegistrationTypeDetail.registrationSubTypeHylandsBulkProduct);
+			
+		userRoleTemplate.put(AttributeUserRoleTemplate.registrationSubTypeIDS,RegistrationTypeDetail.registrationSubTypeHylandsBulkProductIDS);
+										
+		return userRoleTemplate;
+		
+	}
+	
+	public static HashMap<String, String> userRoleTemplateFinishedGoods()
+	{
+		HashMap<String, String> userRoleTemplate=new HashMap<String, String>();
+		
+userRoleTemplate.put(AttributeUserRoleTemplate.firstUserRole,approver);
+		
+		userRoleTemplate.put(AttributeUserRoleTemplate.secondUserRole,reviewer);
+			
+		userRoleTemplate.put(AttributeUserRoleTemplate.approvalSubType,ApprovalSubType.registrationApproval);
+		
+		userRoleTemplate.put(AttributeUserRoleTemplate.templateName,RegistrationTypeDetail.registrationTypeHylandsFinishedGoods);
+
+		userRoleTemplate.put(AttributeUserRoleTemplate.registrationType,RegistrationTypeDetail.registrationTypeHylandsFinishedGoods);
+						
+		userRoleTemplate.put(AttributeUserRoleTemplate.registrationTypeIDS,RegistrationTypeDetail.registrationTypeHylandsFinishedGoodsIDS);
+		
+		userRoleTemplate.put(AttributeUserRoleTemplate.registrationSubType,RegistrationTypeDetail.registrationSubTypeHylandsFinishedGoods);
+			
+		userRoleTemplate.put(AttributeUserRoleTemplate.registrationSubTypeIDS,RegistrationTypeDetail.registrationSubTypeHylandsFinishedGoodsIDS);
+										
+		return userRoleTemplate;
+		
+	}
+	
+	public static HashMap<String, String> userRoleTemplateExternallyManufactured()
+	{
+		HashMap<String, String> userRoleTemplate=new HashMap<String, String>();
+		
+		userRoleTemplate.put(AttributeUserRoleTemplate.firstUserRole,approver);
+		
+		userRoleTemplate.put(AttributeUserRoleTemplate.secondUserRole,reviewer);
+			
+		userRoleTemplate.put(AttributeUserRoleTemplate.approvalSubType,ApprovalSubType.registrationApproval);
+		
+		userRoleTemplate.put(AttributeUserRoleTemplate.templateName,RegistrationTypeDetail.registrationTypeHylandsExternallyManufactured);
+
+		userRoleTemplate.put(AttributeUserRoleTemplate.registrationType,RegistrationTypeDetail.registrationTypeHylandsExternallyManufactured);
+						
+		userRoleTemplate.put(AttributeUserRoleTemplate.registrationTypeIDS,RegistrationTypeDetail.registrationTypeHylandsExternallyManufacturedIDS);
+		
+		userRoleTemplate.put(AttributeUserRoleTemplate.registrationSubType,RegistrationTypeDetail.registrationSubTypeHylandsExternallyManufactured);
+			
+		userRoleTemplate.put(AttributeUserRoleTemplate.registrationSubTypeIDS,RegistrationTypeDetail.registrationSubTypeHylandsExternallyManufacturedIDS);
+										
+		return userRoleTemplate;
+		
+	}
+	
+	public static HashMap<String, String> userRoleTemplateStabilityStudies()
+	{
+		HashMap<String, String> userRoleTemplate=new HashMap<String, String>();
+		
+		userRoleTemplate.put(AttributeUserRoleTemplate.firstUserRole,approver);
+		
+		userRoleTemplate.put(AttributeUserRoleTemplate.secondUserRole,reviewer);
+		
+		userRoleTemplate.put(AttributeUserRoleTemplate.approvalSubType,ApprovalSubType.registrationApproval);
+		
+		userRoleTemplate.put(AttributeUserRoleTemplate.templateName,RegistrationTypeDetail.registrationTypeHylandsStabilityStudies);
+
+		
+		userRoleTemplate.put(AttributeUserRoleTemplate.registrationType,RegistrationTypeDetail.registrationTypeHylandsStabilityStudies);
+						
+		userRoleTemplate.put(AttributeUserRoleTemplate.registrationTypeIDS,RegistrationTypeDetail.registrationTypeHylandsStabilityStudiesIDS);
+		
+		userRoleTemplate.put(AttributeUserRoleTemplate.registrationSubType,RegistrationTypeDetail.registrationSubTypeHylandsStabilityStudies);
+			
+		userRoleTemplate.put(AttributeUserRoleTemplate.registrationSubTypeIDS,RegistrationTypeDetail.registrationSubTypeHylandsStabilityStudiesIDS);
+										
+		return userRoleTemplate;
+		
+	}
+	
+	
+	
 }

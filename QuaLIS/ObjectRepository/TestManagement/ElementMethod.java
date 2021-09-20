@@ -24,10 +24,6 @@ public class ElementMethod extends ElementName {
 	@FindBy(xpath = "//*[@id='ID_MD_ActionMenu']/a")
 	public static WebElement methodAction;
 	
-	
-	
-	
-
 	@FindBy(xpath = "//*[@id=\"ID_MD_MethodHead\"]/div[2]/div")
 	public static WebElement searchIcon;
 	

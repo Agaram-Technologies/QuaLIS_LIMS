@@ -8,24 +8,25 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import Flow.TestDataJPDC;
 import GenericRegistration.ElementJPDCRequestTest;
+import Settings.RegistrationCategory;
 import Utility.BasicOperation;
 import Utility.BrowserOperation;
 
 public class TestCoverageTemplateMaster extends BrowserOperation{
 	public static void templateMasterFlow(String sampleCategory,String materialCategory, String instrumentCategory,  String firstField) throws InterruptedException
 	{
-			TestCoverageTemplateMaster.product(sampleCategory,  firstField);
+		//TestCoverageTemplateMaster.add(RegistrationCategory.product,sampleCategory,  firstField);
 		 
-		 TestCoverageTemplateMaster.instrument(instrumentCategory, firstField);
+		TestCoverageTemplateMaster.add(RegistrationCategory.instrument,instrumentCategory, firstField);		 
 		 
-		 
-		 TestCoverageTemplateMaster.material(materialCategory,  firstField);
+		TestCoverageTemplateMaster.add(RegistrationCategory.material,materialCategory,  firstField);
 		 
 	}
 	
 	
 	
-	public static void instrument(String category, String firstField) throws InterruptedException
+	
+	public static void add(String registrationCategory,String category, String firstField) throws InterruptedException
 	{
 
 		PageFactory.initElements(driver, ElementTemplateMaster.class);
@@ -34,49 +35,26 @@ public class TestCoverageTemplateMaster extends BrowserOperation{
 		
 		ElementTemplateMaster.configurationIcon.click();
 		
-		PageFactory.initElements(driver, ElementFTPConfiguration.class);
-		
-		ElementFTPConfiguration.FTPConfigurationIcon.click();
-		
 		ElementTemplateMaster.templateMasterIcon.click();
 		
+		System.out.println(registrationCategory);
 		
-	
-		
-		WebElement templateMasterFilterSampleType = ElementTemplateMaster.templateMasterFilterSampleType;
-
-		Select templateMasterFilterSampleTypeSelect = new Select(templateMasterFilterSampleType);
-
-		templateMasterFilterSampleTypeSelect.selectByVisibleText("Instrument");
-		
-		Select filterSampleCategory = new Select(ElementTemplateMaster.filterCategory);
-
-		filterSampleCategory.selectByVisibleText(category);
+		System.out.println(category);
 		
 		
-			
-			
+		BrowserOperation.implicitWait(3);
 		
+		BasicOperation.selectByVisibleText(ElementTemplateMaster.templateMasterFilterSampleType, registrationCategory);
+		
+		BasicOperation.selectByVisibleText(ElementTemplateMaster.filterCategory, category);
 		
 		ElementTemplateMaster.templateMasterFilterFind.click();
 	
-
-		WebDriverWait wait11= new WebDriverWait(driver,100);
+		BasicOperation.exception(ElementTemplateMaster.templateMasterTabIcon);
 		
-		wait11.until(ExpectedConditions.visibilityOf(ElementTemplateMaster.templateMasterAction));
 		
-		wait11.until(ExpectedConditions.elementToBeClickable(ElementTemplateMaster.templateMasterAction));		
+		BasicOperation.exception(ElementTemplateMaster.templateMasterAction);
 	
-		
-		
-		try {
-			ElementTemplateMaster.templateMasterAction.click();
-		} catch (Exception e) {
-			Thread.sleep(2000);
-
-			ElementTemplateMaster.templateMasterAction.click();
-
-		}
 
 		ElementTemplateMaster.templateMasterAdd.click();
 		
@@ -86,141 +64,23 @@ public class TestCoverageTemplateMaster extends BrowserOperation{
 		
 		ElementTemplateMaster.templateMasterAddSubmit.click();
 		
-	wait11.until(ExpectedConditions.visibilityOf(ElementTemplateMaster.templateMasterAction));
+		BasicOperation.wait(ElementTemplateMaster.templateMasterAction);
 		
-		wait11.until(ExpectedConditions.elementToBeClickable(ElementTemplateMaster.templateMasterAction));		
+		BasicOperation.exception(ElementTemplateMaster.templateMasterAction);
 	
-		
-	
-		try {
-			ElementTemplateMaster.templateMasterAction.click();
-		} catch (Exception e) {
-			Thread.sleep(2000);
-
-			ElementTemplateMaster.templateMasterAction.click();
-
-		}
-		
-		ElementTemplateMaster.templateMasterApprove.click();
-		
-
-		
-
-		
-		wait11.until(ExpectedConditions.visibilityOf(ElementTemplateMaster.templateMasterAction));
-			
-			wait11.until(ExpectedConditions.elementToBeClickable(ElementTemplateMaster.templateMasterAction));		
-		
-		
-		
-		
-		
-			ElementTemplateMaster.configurationIcon.click();
-			
-			ElementTemplateMaster.masterIcon.click();
-		
-		
-		
-		
-		
-		
-	}
-	
-	
-	
-	public static void product(String category, String firstField) throws InterruptedException
-	{
-
-		PageFactory.initElements(driver, ElementTemplateMaster.class);
-
-		ElementTemplateMaster.masterIcon.click();
-		
-		ElementTemplateMaster.configurationIcon.click();
-		
-		PageFactory.initElements(driver, ElementFTPConfiguration.class);
-		
-		ElementFTPConfiguration.FTPConfigurationIcon.click();
-		
-		ElementTemplateMaster.templateMasterIcon.click();
-		
-		
-	
-		
-		WebElement templateMasterFilterSampleType = ElementTemplateMaster.templateMasterFilterSampleType;
-
-		Select templateMasterFilterSampleTypeSelect = new Select(templateMasterFilterSampleType);
-
-		templateMasterFilterSampleTypeSelect.selectByVisibleText("Product");
-		
-		Select filterSampleCategory = new Select(ElementTemplateMaster.filterCategory);
-
-		filterSampleCategory.selectByVisibleText(category);
-		
-		
-			
-			
-		
-		
-		ElementTemplateMaster.templateMasterFilterFind.click();
-	
-
-		WebDriverWait wait11= new WebDriverWait(driver,100);
-		
-		wait11.until(ExpectedConditions.visibilityOf(ElementTemplateMaster.templateMasterAction));
-		
-		wait11.until(ExpectedConditions.elementToBeClickable(ElementTemplateMaster.templateMasterAction));		
-	
-		
-		
-		try {
-			ElementTemplateMaster.templateMasterAction.click();
-		} catch (Exception e) {
-			Thread.sleep(2000);
-
-			ElementTemplateMaster.templateMasterAction.click();
-
-		}
-
-		ElementTemplateMaster.templateMasterAdd.click();
-		
-		ElementTemplateMaster.templateMasterName.sendKeys(category);
-		
-		ElementTemplateMaster.firstField.sendKeys(firstField);
-		
-		ElementTemplateMaster.templateMasterAddSubmit.click();
-		
-	wait11.until(ExpectedConditions.visibilityOf(ElementTemplateMaster.templateMasterAction));
-		
-		wait11.until(ExpectedConditions.elementToBeClickable(ElementTemplateMaster.templateMasterAction));		
-	
-			try {
-				ElementTemplateMaster.templateMasterAction.click();
-			} catch (Exception e) {
-				Thread.sleep(2000);
-
-				ElementTemplateMaster.templateMasterAction.click();
-
-			}
 			
 			ElementTemplateMaster.templateMasterApprove.click();
 			
 		
-	
+			BasicOperation.wait(ElementTemplateMaster.templateMasterAction);
 
-		
-		wait11.until(ExpectedConditions.visibilityOf(ElementTemplateMaster.templateMasterAction));
-			
-		wait11.until(ExpectedConditions.elementToBeClickable(ElementTemplateMaster.templateMasterAction));		
-		
-		
-		
 		
 		
 			ElementTemplateMaster.configurationIcon.click();
 			
 			ElementTemplateMaster.masterIcon.click();
 		
-		
+			ElementTemplateMaster.homeIcon.click();
 		
 		
 		

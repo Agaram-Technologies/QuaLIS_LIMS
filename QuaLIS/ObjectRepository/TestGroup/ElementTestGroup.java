@@ -7,6 +7,8 @@ import org.openqa.selenium.support.FindBy;
 
 public class ElementTestGroup {
 
+	@FindBy(xpath="//*[@id=\"MenuTree\"]/li[1]/a")
+	public static WebElement homeIcon;
 
 	@FindBy(id = "iMenuID_1")
 	public static WebElement masterIcon;
@@ -21,14 +23,13 @@ public class ElementTestGroup {
 	@FindBy(xpath = "//*[@id=\"ID_TG_TreeView\"]/div")
 	public static List< WebElement> testGroupTreeList;
 	
-	
 
-	
 	@FindBy(id = "ID_TG_SampleType")
-	public static WebElement testGroupFilterSampleType;
+	public static WebElement testGroupFilterRegistrationCategory;
 
 	@FindBy(id = "ID_TG_SampleCategory")
-	public static WebElement testGroupFilterSampleCategory;
+	public static WebElement testGroupFilterCategory;
+	
 
 	@FindBy(id = "ID_TG_Sample")
 	public static WebElement testGroupFilterSample;
@@ -46,7 +47,7 @@ public class ElementTestGroup {
 	public static WebElement testGroupFilterIcon;
 
 
-	@FindBy(id = "ID_MD_testGroupDeletebutton")
+	@FindBy(xpath = "//*[@id=\"ID_TG_TestGroup\"]")
 	public static WebElement testGroupSpecificationIcon;
 
 
@@ -210,27 +211,18 @@ public class ElementTestGroup {
 	@FindBy(id = "ID_TG_TestCategoryCheckbox")
 	public static WebElement testGroupTestDetailTestTestCategoryFilter;
 	
-
 	@FindBy(id = "ID_TG_Subcontent")
 	public static WebElement testGroupTestDetailTestTestBack;
 	
 	@FindBy(id = "selectall")
 	public static WebElement testGroupTestDetailTestTestSelectAll;
-	
-	
+		
+	@FindBy(xpath = "//*[@id=\"ID_APC_ListDiv_62_0\"]/li")
+	public static List<WebElement> testGroupTestDetailTestTestList;
+		
 	@FindBy(xpath = "//*[@id=\"ID_TG_AvailListContainer\"]/button")
 	public static WebElement testGroupTestDetailTestFind;
-	
-/*	@FindBy(xpath = "//*[@id='ID_TG_TestPopUp']/span/div/input")
-	public static WebElement testGroupTestDetailTestSearchField;
-	*/
-/*	
-	@FindBy(xpath = "//*[@id='ID_TG_TestPopUp']/span/div/input")
-	public static WebElement testGroupTestDetailTestSelectAll;
-	//*[@id=""]/p
-	
-	*/                 //*[@id="ID_TG_TestPopUp"]/li	
-	
+
 	@FindBy(xpath = "//*[@id='ID_TG_TestPopUp']/li")
 	public static WebElement testGroupTestDetailTestSearchResult;
 	

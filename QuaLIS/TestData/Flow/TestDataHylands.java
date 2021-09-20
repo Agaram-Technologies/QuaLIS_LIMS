@@ -564,7 +564,7 @@ public class TestDataHylands extends BrowserOperation {
 	{
 		HashMap<String, String> methodCategory=new HashMap<String, String>();
 		
-		String nameAdd="Fuel method Category";
+		String nameAdd="Fuel Method Category";
 		
 		String nameAddMandatory="methodCategory002AA";
 		

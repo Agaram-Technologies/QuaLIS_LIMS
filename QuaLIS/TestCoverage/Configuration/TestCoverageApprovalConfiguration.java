@@ -2,239 +2,162 @@ package Configuration;
 
 import java.io.IOException;
 
-
-
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.poi.ddf.EscherColorRef.SysIndexSource;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import Config.RegistrationDetail;
+import Settings.ApprovalSubType;
+import Settings.RegistrationTypeDetail;
+import Settings.TestStatus;
+import Utility.BasicOperation;
 import Utility.BrowserOperation;
 
-public class TestCoverageApprovalConfiguration extends BrowserOperation
-{
-	
-	
-	
-	public static void hylands(boolean autoJobAllot) throws InterruptedException
-	{
-		
-		
-		
-		
-		if(autoJobAllot==true)
-		{
-			TestCoverageApprovalConfiguration.registrationType(RegistrationDetail.purifiedWater, true, false, "a", "a", "a");
-			
-			TestCoverageApprovalConfiguration.registrationType(RegistrationDetail.rawMaterial, true, false, "a", "a", "a");
-			
-			TestCoverageApprovalConfiguration.registrationType(RegistrationDetail.intermediate, true, false, "a", "a", "a");
-			
-			TestCoverageApprovalConfiguration.registrationType(RegistrationDetail.bulkProduct, true, false, "a", "a", "a");
-			
-			TestCoverageApprovalConfiguration.registrationType(RegistrationDetail.finishedGoods, true, false, "a", "a", "a");
-			
-			TestCoverageApprovalConfiguration.registrationType(RegistrationDetail.externallyManufactured, true, false, "a", "a", "a");
-			
-			TestCoverageApprovalConfiguration.registrationType(RegistrationDetail.stabilityStudies, true, false, "a", "a", "a");
-		}
-		else
-		{
-			TestCoverageApprovalConfiguration.registrationType(RegistrationDetail.purifiedWater, false, false, "a", "a", "a");
-			
-			TestCoverageApprovalConfiguration.registrationType(RegistrationDetail.rawMaterial, false, false, "a", "a", "a");
-			
-			TestCoverageApprovalConfiguration.registrationType(RegistrationDetail.intermediate, false, false, "a", "a", "a");
-		
-			TestCoverageApprovalConfiguration.registrationType(RegistrationDetail.bulkProduct, false, false, "a", "a", "a");
+public class TestCoverageApprovalConfiguration extends BrowserOperation {
 
-			TestCoverageApprovalConfiguration.registrationType(RegistrationDetail.finishedGoods, false, false, "a", "a", "a");
-			
-			TestCoverageApprovalConfiguration.registrationType(RegistrationDetail.externallyManufactured, false, false, "a", "a", "a");
-			
-			TestCoverageApprovalConfiguration.registrationType(RegistrationDetail.stabilityStudies, false, false, "a", "a", "a");
-	
-		
-		}
-		
+	public static void hylands(boolean autoJobAllot) throws InterruptedException {
+
+		if (autoJobAllot == true) 
+		{
+
+			TestCoverageApprovalConfiguration.userRoleTemplateAdd(RegistrationTypeDetail.registrationSubTypeHylandsPurifiedWater, true, false, "a", "a",
+					"a");
+
+			TestCoverageApprovalConfiguration.userRoleTemplateAdd(RegistrationTypeDetail.registrationSubTypeHylandsRawMaterial, true, false, "a", "a",
+					"a");
+
+			TestCoverageApprovalConfiguration.userRoleTemplateAdd(RegistrationTypeDetail.registrationSubTypeHylandsIntermediate, true, false, "a", "a",
+					"a");
+
+			TestCoverageApprovalConfiguration.userRoleTemplateAdd(RegistrationTypeDetail.registrationSubTypeHylandsBulkProduct, true, false, "a", "a",
+					"a");
+
+			TestCoverageApprovalConfiguration.userRoleTemplateAdd(RegistrationTypeDetail.registrationSubTypeHylandsFinishedGoods, true, false, "a", "a",
+					"a");
+
+			TestCoverageApprovalConfiguration.userRoleTemplateAdd(RegistrationTypeDetail.registrationSubTypeHylandsExternallyManufactured, true, false,
+					"a", "a", "a");
+
+			TestCoverageApprovalConfiguration.userRoleTemplateAdd(RegistrationTypeDetail.registrationSubTypeHylandsStabilityStudies, true, false, "a",
+					"a", "a");
 	}
-	/*public static void domnica(boolean autoJobAllot) throws InterruptedException
+		else 
+		{
+			TestCoverageApprovalConfiguration.userRoleTemplateAdd(RegistrationTypeDetail.registrationSubTypeHylandsPurifiedWater, false, false, "a", "a","a");
+
+			TestCoverageApprovalConfiguration.userRoleTemplateAdd(RegistrationTypeDetail.registrationSubTypeHylandsRawMaterial, false, false, "a", "a","a");
+
+			TestCoverageApprovalConfiguration.userRoleTemplateAdd(RegistrationTypeDetail.registrationSubTypeHylandsIntermediate, false, false, "a", "a","a");
+
+			TestCoverageApprovalConfiguration.userRoleTemplateAdd(RegistrationTypeDetail.registrationSubTypeHylandsBulkProduct, false, false, "a", "a","a");
+
+			TestCoverageApprovalConfiguration.userRoleTemplateAdd(RegistrationTypeDetail.registrationSubTypeHylandsFinishedGoods, false, false, "a", "a","a");
+
+			TestCoverageApprovalConfiguration.userRoleTemplateAdd(RegistrationTypeDetail.registrationSubTypeHylandsExternallyManufactured, false, false,"a", "a", "a");
+
+			TestCoverageApprovalConfiguration.userRoleTemplateAdd(RegistrationTypeDetail.registrationSubTypeHylandsStabilityStudies, false, false, "a",	"a", "a");
+
+		}
+
+	}
+
+	public static void domnica(boolean autoJobAllot) throws InterruptedException 
 	{
-		
-		
-		
-		
-		if(autoJobAllot==true)
+
+		if (autoJobAllot == true)
 		{
-			TestCoverageApprovalConfiguration.registrationType(RegistrationDetail.dominica, true, false, "a", "a", "a");
-			
-			}
-		else
+			TestCoverageApprovalConfiguration.userRoleTemplateAdd(RegistrationTypeDetail.registrationSubTypeDomnicaRoutine, true, false, "a", "a", "a");
+
+			TestCoverageApprovalConfiguration.userRoleTemplateAdd(RegistrationTypeDetail.registrationSubTypeInstrument, true, false, "a", "a", "a");
+
+			TestCoverageApprovalConfiguration.userRoleTemplateAdd(RegistrationTypeDetail.registrationSubTypeMaterial, true, false, "a", "a", "a");
+
+		} 
+		else 
 		{
+
+			TestCoverageApprovalConfiguration.userRoleTemplateAdd(RegistrationTypeDetail.registrationSubTypeDomnicaRoutine, false, false, "a", "a", "a");
+
+			TestCoverageApprovalConfiguration.userRoleTemplateAdd(RegistrationTypeDetail.registrationSubTypeInstrument, false, false, "a", "a", "a");
+
+			TestCoverageApprovalConfiguration.userRoleTemplateAdd(RegistrationTypeDetail.registrationSubTypeMaterial, false, false, "a", "a", "a");	
+		}
+
+	}
+
+	public static void userRoleTemplateAdd(String registrationSubType, boolean autoJobAllocation, boolean autoComplete,
+			String filterStatus, String validationStatus, String approvalStatus) throws InterruptedException {
+		
+		String registrationType = RegistrationTypeDetail.registrationType(registrationSubType);
 				
-			TestCoverageApprovalConfiguration.registrationType(RegistrationDetail.dominica, false, false, "a", "a", "a");
+		String registrationTypeIDS = RegistrationTypeDetail.registrationTypeIDS(registrationSubType);
+		
+		String registrationSubTypeIDS = RegistrationTypeDetail.registrationSubTypeIDS(registrationSubType);
+		
+		System.out.println(registrationType);
 	
-		
-		}
-		
-	}
-	*/
-		
-
-	/*public static void JPDC(boolean autoJobAllot) throws InterruptedException
-	{
-		
-	
-		if(autoJobAllot==true)
-		{
-			TestCoverageApprovalConfiguration.registrationType(RegistrationDetail.requestType, true, false, "a", "a", "a");
-			
-			TestCoverageApprovalConfiguration.registrationType(RegistrationDetail.claimTest, true, false, "a", "a", "a");
-			
-			TestCoverageApprovalConfiguration.registrationType(RegistrationDetail.specialTest, true, false, "a", "a", "a");
-			
-		}
-		else
-		{
-			TestCoverageApprovalConfiguration.registrationType(RegistrationDetail.requestType, false, false, "a", "a", "a");
-			
-			TestCoverageApprovalConfiguration.registrationType(RegistrationDetail.claimTest, false, false, "a", "a", "a");
-			
-			TestCoverageApprovalConfiguration.registrationType(RegistrationDetail.specialTest, false, false, "a", "a", "a");
-			
-	
-		}
-		
-	}*/
-	
-	
-	
-	public static void registrationType(String registrationType, boolean autoJobAllocation, boolean autoComplete, String filterStatus, String validationStatus, String approvalStatus ) throws InterruptedException {
-
-		String registrationSubType=RegistrationDetail.registrationType(registrationType);
-		
-		String dropValue="";
-		
-		if(registrationType.equals(RegistrationDetail.purifiedWater))
-		{
-			dropValue="20";
-		}
-		else if (registrationType.equals(RegistrationDetail.rawMaterial)) {
-			dropValue="21";
-		}
-		
-		else if (registrationType.equals(RegistrationDetail.intermediate)) {
-			dropValue="22";
-		}
-		
-		else if (registrationType.equals(RegistrationDetail.bulkProduct)) {
-			dropValue="23";
-		}
-		
-		else if (registrationType.equals(RegistrationDetail.finishedGoods)) {
-			dropValue="24";
-		}
-		
-		else if (registrationType.equals(RegistrationDetail.stabilityStudies)) {
-			dropValue="25";
-		}
-		
-		else if (registrationType.equals(RegistrationDetail.externallyManufactured)) {
-			dropValue="26";
-		}
-		
-		
-		
 		PageFactory.initElements(driver, ElementApprovalConfiguration.class);
 
 		ElementApprovalConfiguration.masterIcon.click();
 
 		ElementApprovalConfiguration.configurationIcon.click();
 
-		PageFactory.initElements(driver, ElementUserRoleTemplate.class);
-
-		ElementUserRoleTemplate.userRoleTemplateIcon.click();
-
 		ElementApprovalConfiguration.approvalConfigurationIcon.click();
-
-		WebElement approvalConfigurationFilterApprovalType = ElementApprovalConfiguration.approvalConfigurationFilterApprovalType;
-
-		Select approvalConfigurationFilterApprovalTypeSelect = new Select(approvalConfigurationFilterApprovalType);
-
-		approvalConfigurationFilterApprovalTypeSelect.selectByVisibleText("Registration Approval");
-
-		WebElement approvalConfigurationRegistrationType = ElementApprovalConfiguration.approvalConfigurationRegistrationType;
-
-		Select approvalConfigurationRegistrationTypeSelect = new Select(approvalConfigurationRegistrationType);
-
-	
 		
-		try {
+		BrowserOperation.implicitWait(2);
+
+		BasicOperation.selectByVisibleText(ElementApprovalConfiguration.approvalConfigurationFilterApprovalType,
+				ApprovalSubType.registrationApproval);
+
+		try 
+		{
 			
-				approvalConfigurationRegistrationTypeSelect.selectByVisibleText(registrationType);
+			BasicOperation.selectByVisibleText(ElementApprovalConfiguration.approvalConfigurationRegistrationType,registrationType);
+
 			
-		} catch (Exception e) {
-			
-				approvalConfigurationRegistrationTypeSelect.selectByValue(dropValue);
-			// TODO: handle exception
+		} 
+		catch (Exception e) 
+		{
+			BasicOperation.selectByVisibleText(ElementApprovalConfiguration.approvalConfigurationRegistrationType,registrationTypeIDS);
 		}
 
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
-		WebElement approvalConfigurationRegistrationSubType = ElementApprovalConfiguration.approvalConfigurationRegistrationSubType;
-
-		Select approvalConfigurationRegistrationSubTypeSelect = new Select(approvalConfigurationRegistrationSubType);
-		
-		/*try {
+		try 
+		{
 			
-			approvalConfigurationRegistrationSubTypeSelect.selectByVisibleText(registrationSubType);
-		
-	} catch (Exception e) {
-		
-		approvalConfigurationRegistrationSubTypeSelect.selectByValue(dropValue);
-		// TODO: handle exception
-	}
-*/
+			BasicOperation.selectByVisibleText(ElementApprovalConfiguration.approvalConfigurationRegistrationSubType,registrationSubType);
 
-		
+			
+		} 
+		catch (Exception e) 
+		{
+			BasicOperation.selectByVisibleText(ElementApprovalConfiguration.approvalConfigurationRegistrationSubType,registrationSubTypeIDS);
+		}
+				
 
 		ElementApprovalConfiguration.approvalConfigurationFilterFind.click();
 
-		WebDriverWait wait11 = new WebDriverWait(driver, 10);
-
-		wait11.until(ExpectedConditions.visibilityOf(ElementApprovalConfiguration.approvalConfigurationAction));
-
-		wait11.until(ExpectedConditions.elementToBeClickable(ElementApprovalConfiguration.approvalConfigurationAction));
+		BasicOperation.exception(ElementApprovalConfiguration.approvalConfigurationTabIcon);
 
 		List<WebElement> list = ElementApprovalConfiguration.approvalConfigurationList;
 
-		try {
-			ElementApprovalConfiguration.approvalConfigurationAction.click();
-		} catch (Exception e) {
-			Thread.sleep(5000);
-
-			ElementApprovalConfiguration.approvalConfigurationAction.click();
-
-		}
+		BasicOperation.exception(ElementApprovalConfiguration.approvalConfigurationAction);
 
 		ElementApprovalConfiguration.approvalConfigurationCreateVersion.click();
 
+		BasicOperation.exception(ElementApprovalConfiguration.approvalConfiguration);
+
 		ElementApprovalConfiguration.approvalConfiguration.sendKeys(registrationType);
-		
+
 		ElementApprovalConfiguration.approvalConfigurationJobAllocation.click();
-		
-		if(autoJobAllocation==true)
-		{
+
+		if (autoJobAllocation == true) {
 			ElementApprovalConfiguration.approvalConfigurationAutoJobAllot.click();
 		}
-		
-
-		
 
 		ElementApprovalConfiguration.approvalConfigurationVersionAddSave.click();
 
@@ -258,10 +181,7 @@ public class TestCoverageApprovalConfiguration extends BrowserOperation
 
 		ElementApprovalConfiguration.approvalConfigurationRoleConfigurationIcon.click();
 
-		wait11.until(ExpectedConditions.visibilityOf(ElementApprovalConfiguration.approvalConfigurationUserRoleSave));
-
-		wait11.until(ExpectedConditions
-				.elementToBeClickable(ElementApprovalConfiguration.approvalConfigurationUserRoleSave));
+		BasicOperation.wait(ElementApprovalConfiguration.approvalConfigurationUserRoleSave);
 
 		List<WebElement> userRoleList = ElementApprovalConfiguration.approvalConfigurationRegistrationUserRoleList;
 
@@ -301,9 +221,8 @@ public class TestCoverageApprovalConfiguration extends BrowserOperation
 
 		WebElement userRoleAlertClose = ElementApprovalConfiguration.approvalConfigurationRegistrationUserRoleAlertClose;
 
-		
 		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-		
+
 		try {
 			if (userRoleAlert.isDisplayed()) {
 				userRoleAlertClose.click();
@@ -319,13 +238,10 @@ public class TestCoverageApprovalConfiguration extends BrowserOperation
 		}
 
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		
+
 		userRoleList.get(2).click();
 
-		wait11.until(ExpectedConditions.visibilityOf(ElementApprovalConfiguration.approvalConfigurationUserRoleSave));
-
-		wait11.until(ExpectedConditions
-				.elementToBeClickable(ElementApprovalConfiguration.approvalConfigurationUserRoleSave));
+		BasicOperation.wait(ElementApprovalConfiguration.approvalConfigurationUserRoleSave);
 
 		ElementApprovalConfiguration.approvalConfigurationRegistrationPartialApprove.click();
 
@@ -353,9 +269,8 @@ public class TestCoverageApprovalConfiguration extends BrowserOperation
 
 		ElementApprovalConfiguration.approvalConfigurationRoleConfigurationAddSubmit.click();
 
-		
 		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-		
+
 		try {
 			if (userRoleAlert.isDisplayed()) {
 				userRoleAlertClose.click();
@@ -372,7 +287,6 @@ public class TestCoverageApprovalConfiguration extends BrowserOperation
 
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
-
 		try {
 
 			ElementApprovalConfiguration.approvalConfigurationRoleConfigurationAddCancel.click();
@@ -382,219 +296,193 @@ public class TestCoverageApprovalConfiguration extends BrowserOperation
 			ElementApprovalConfiguration.approvalConfigurationRoleConfigurationAddCancel.click();
 		}
 
-		wait11.until(ExpectedConditions.visibilityOf(ElementApprovalConfiguration.approvalConfigurationAction));
+		BasicOperation.wait(ElementApprovalConfiguration.approvalConfigurationAction);
 
-		wait11.until(ExpectedConditions.elementToBeClickable(ElementApprovalConfiguration.approvalConfigurationAction));
-
-		ElementApprovalConfiguration.approvalConfigurationAction.click();
+		BasicOperation.exception(ElementApprovalConfiguration.approvalConfigurationAction);
 
 		ElementApprovalConfiguration.approvalConfigurationApprove.click();
 
-		wait11.until(ExpectedConditions.visibilityOf(ElementApprovalConfiguration.approvalConfigurationAction));
-
-		wait11.until(ExpectedConditions.elementToBeClickable(ElementApprovalConfiguration.approvalConfigurationAction));
+		BasicOperation.wait(ElementApprovalConfiguration.approvalConfigurationAction);
 
 		ElementApprovalConfiguration.configurationIcon.click();
 
 		ElementApprovalConfiguration.masterIcon.click();
 
+		ElementApprovalConfiguration.homeIcon.click();
+
 	}
-	
-	public static void testGroup() throws InterruptedException
-	{
-		
+
+	public static void testGroup(boolean autoApproval) throws InterruptedException {
+
 		
 		PageFactory.initElements(driver, ElementApprovalConfiguration.class);
 		
+		List<WebElement> userRoleList = ElementApprovalConfiguration.approvalConfigurationRegistrationUserRoleList;
+
+		
+
 		ElementApprovalConfiguration.masterIcon.click();
-		
+
 		ElementApprovalConfiguration.configurationIcon.click();
-		
+
 		ElementApprovalConfiguration.approvalConfigurationIcon.click();
-		
-		
-		try
-		{
-			WebElement approvalConfigurationFilterApprovalType = ElementApprovalConfiguration.approvalConfigurationFilterApprovalType;
 
-			Select approvalConfigurationFilterApprovalTypeSelect = new Select(approvalConfigurationFilterApprovalType);
+		BasicOperation.selectByVisibleText(ElementApprovalConfiguration.approvalConfigurationFilterApprovalType,
+				ApprovalSubType.testGroupApproval);
 
-			approvalConfigurationFilterApprovalTypeSelect.selectByVisibleText("Test Group Approval");
-			
-		}
-		
-		catch(Exception e)
-		{
-			ElementApprovalConfiguration.approvalConfigurationFilterIcon.click();
-			
-			WebElement approvalConfigurationFilterApprovalType = ElementApprovalConfiguration.approvalConfigurationFilterApprovalType;
-
-			Select approvalConfigurationFilterApprovalTypeSelect = new Select(approvalConfigurationFilterApprovalType);
-
-			approvalConfigurationFilterApprovalTypeSelect.selectByVisibleText("Test Group Approval");
-			
-		}
-		
 		ElementApprovalConfiguration.approvalConfigurationFilterFind.click();
-		
-	
-		
 
-		WebDriverWait wait11= new WebDriverWait(driver,100);
-		
-		wait11.until(ExpectedConditions.visibilityOf(ElementApprovalConfiguration.approvalConfigurationAction));
-		
-		wait11.until(ExpectedConditions.elementToBeClickable(ElementApprovalConfiguration.approvalConfigurationAction));		
-		
-		List<WebElement> list=ElementApprovalConfiguration.approvalConfigurationList;
-		
+		BasicOperation.exception(ElementApprovalConfiguration.approvalConfigurationTabIcon);
+
+		BasicOperation.exception(ElementApprovalConfiguration.approvalConfigurationAction);
+
+		ElementApprovalConfiguration.approvalConfigurationCreateVersion.click();
+
+		ElementApprovalConfiguration.approvalConfiguration.sendKeys("Test Group");
+
+		if(autoApproval==true)
+		{
+			if (ElementApprovalConfiguration.approvalConfigurationAutoApproval.isSelected() == false) 
+			{
+				ElementApprovalConfiguration.approvalConfigurationAutoApproval.click();
+			}
+		}
+		else
+		{
+			if (ElementApprovalConfiguration.approvalConfigurationAutoApproval.isSelected() ) 
+			{
+				ElementApprovalConfiguration.approvalConfigurationAutoApproval.click();
+			}
+		}
 		
 	
-	
+		ElementApprovalConfiguration.approvalConfigurationVersionAddSave.click();
+
+		WebElement alert = ElementApprovalConfiguration.approvalConfigurationRegistrationAlert;
+
+		WebElement alertClose = ElementApprovalConfiguration.approvalConfigurationRegistrationAlertClose;
 
 		try {
-			ElementApprovalConfiguration.approvalConfigurationAction.click();
+			if (alert.isDisplayed()) {
+				alertClose.click();
+			}
+
+		}
+
+		catch (Exception e) {
+			ElementApprovalConfiguration.approvalConfigurationVersionAddSave.click();
+			if (alert.isDisplayed()) {
+				alertClose.click();
+			}
+		}
+
+		ElementApprovalConfiguration.approvalConfigurationRoleConfigurationIcon.click();
+		
+		userRoleList.get(1).click();
+
+		ElementApprovalConfiguration.approvalConfigurationCorrection.click();
+
+		BasicOperation.selectByVisibleText(ElementApprovalConfiguration.approvalConfigurationApprovalStatus,
+				TestStatus.reviewed);
+
+		ElementApprovalConfiguration.approvalConfigurationRegistrationFilterAdd.click();
+
+		ElementApprovalConfiguration.approvalConfigurationRegistrationFilterSelectAll.click();
+
+		ElementApprovalConfiguration.approvalConfigurationRegistrationFilterClose.click();
+
+		ElementApprovalConfiguration.approvalConfigurationRegistrationValidationAdd.click();
+
+		ElementApprovalConfiguration.approvalConfigurationRegistrationValidationSelectAll.click();
+
+		ElementApprovalConfiguration.approvalConfigurationRegistrationValidationClose.click();
+
+		ElementApprovalConfiguration.approvalConfigurationRoleConfigurationAddSubmit.click();
+
+		WebElement userRoleAlert = ElementApprovalConfiguration.approvalConfigurationRegistrationUserRoleAlert;
+
+		WebElement userRoleAlertClose = ElementApprovalConfiguration.approvalConfigurationRegistrationUserRoleAlertClose;
+
+		try {
+			if (userRoleAlert.isDisplayed()) {
+				userRoleAlertClose.click();
+			}
+
+		}
+
+		catch (Exception e) {
+			ElementApprovalConfiguration.approvalConfigurationRoleConfigurationAddSubmit.click();
+			if (userRoleAlert.isDisplayed()) {
+				userRoleAlertClose.click();
+			}
+		}
+		
+		userRoleList.get(2).click();
+
+		
+		BasicOperation.wait(ElementApprovalConfiguration.approvalConfigurationUserRoleSave);
+
+		ElementApprovalConfiguration.approvalConfigurationCorrection.click();
+
+		BasicOperation.selectByVisibleText(ElementApprovalConfiguration.approvalConfigurationApprovalStatus,
+				TestStatus.approved);
+
+		ElementApprovalConfiguration.approvalConfigurationRegistrationFilterAdd.click();
+
+		ElementApprovalConfiguration.approvalConfigurationRegistrationFilterSelectAll.click();
+
+		ElementApprovalConfiguration.approvalConfigurationRegistrationFilterClose.click();
+
+		ElementApprovalConfiguration.approvalConfigurationRegistrationValidationAdd.click();
+
+		ElementApprovalConfiguration.approvalConfigurationRegistrationValidationSelectAll.click();
+
+		ElementApprovalConfiguration.approvalConfigurationRegistrationValidationClose.click();
+
+		ElementApprovalConfiguration.approvalConfigurationRoleConfigurationAddSubmit.click();
+
+		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+
+		try {
+			if (userRoleAlert.isDisplayed()) {
+				userRoleAlertClose.click();
+			}
+
+		}
+
+		catch (Exception e) {
+			ElementApprovalConfiguration.approvalConfigurationRoleConfigurationAddSubmit.click();
+			if (userRoleAlert.isDisplayed()) {
+				userRoleAlertClose.click();
+			}
+		}
+
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+		try {
+
+			ElementApprovalConfiguration.approvalConfigurationRoleConfigurationAddCancel.click();
 		} catch (Exception e) {
 			Thread.sleep(5000);
 
-			ElementApprovalConfiguration.approvalConfigurationAction.click();
-
-		}
-		
-		
-		
-		ElementApprovalConfiguration.approvalConfigurationCreateVersion.click();
-		
-		ElementApprovalConfiguration.approvalConfiguration.sendKeys("Test Group");
-		
-		if(ElementApprovalConfiguration.approvalConfigurationAutoApproval.isSelected()==false)
-		{
-		ElementApprovalConfiguration.approvalConfigurationAutoApproval.click();
-		}
-		
-		
-		ElementApprovalConfiguration.approvalConfigurationVersionAddSave.click();
-		
-		
-
-		WebElement alert=ElementApprovalConfiguration.approvalConfigurationRegistrationAlert;
-		
-		WebElement alertClose=ElementApprovalConfiguration.approvalConfigurationRegistrationAlertClose;
-	
-		try 
-		{
-			if(alert.isDisplayed())
-			{
-				alertClose.click();
-			}
-			
-		}
-		
-		catch(Exception e)
-		{
-			ElementApprovalConfiguration.approvalConfigurationVersionAddSave.click();
-			if(alert.isDisplayed())
-			{
-				alertClose.click();
-			}
-		}
-		
-		
-		
-		
-		
-		
-		ElementApprovalConfiguration.approvalConfigurationRoleConfigurationIcon.click();
-		
-	
-		
-		ElementApprovalConfiguration.approvalConfigurationCorrection.click();
-	
-		
-		
-		
-		
-	WebElement	approvalConfigurationTestGroupFirstApprovalStatus=ElementApprovalConfiguration.approvalConfigurationApprovalStatus;
-		
-		Select approvalStatusElement=new Select(approvalConfigurationTestGroupFirstApprovalStatus);
-		
-		approvalStatusElement.selectByVisibleText("Approved");
-		
-		
-		
-		ElementApprovalConfiguration.approvalConfigurationRegistrationFilterAdd.click();
-		
-		ElementApprovalConfiguration.approvalConfigurationRegistrationFilterSelectAll.click();
-		
-		ElementApprovalConfiguration.approvalConfigurationRegistrationFilterClose.click();
-		
-		ElementApprovalConfiguration.approvalConfigurationRegistrationValidationAdd.click();
-		
-		ElementApprovalConfiguration.approvalConfigurationRegistrationValidationSelectAll.click();
-		
-		ElementApprovalConfiguration.approvalConfigurationRegistrationValidationClose.click();
-	
-		ElementApprovalConfiguration.approvalConfigurationRoleConfigurationAddSubmit.click();
-		
-		WebElement userRoleAlert=ElementApprovalConfiguration.approvalConfigurationRegistrationUserRoleAlert;
-		
-		WebElement userRoleAlertClose=ElementApprovalConfiguration.approvalConfigurationRegistrationUserRoleAlertClose;
-		
-		try 
-		{
-			if(userRoleAlert.isDisplayed())
-			{
-				userRoleAlertClose.click();
-			}
-			
-		}
-		
-		catch(Exception e)
-		{
-			ElementApprovalConfiguration.approvalConfigurationRoleConfigurationAddSubmit.click();
-			if(userRoleAlert.isDisplayed())
-			{
-				userRoleAlertClose.click();
-			}
-		}
-		
-		
-		
-		
-		try {
-		
-		ElementApprovalConfiguration.approvalConfigurationRoleConfigurationAddCancel.click();
-		}
-		catch(Exception e)
-		{
-			Thread.sleep(5000);
-			
-
-			
 			ElementApprovalConfiguration.approvalConfigurationRoleConfigurationAddCancel.click();
 		}
-		
-			
-		wait11.until(ExpectedConditions.visibilityOf(ElementApprovalConfiguration.approvalConfigurationAction));
-		
-		wait11.until(ExpectedConditions.elementToBeClickable(ElementApprovalConfiguration.approvalConfigurationAction));	
-		
-		ElementApprovalConfiguration.approvalConfigurationAction.click();
-		
-		ElementApprovalConfiguration.approvalConfigurationApprove.click();
-		
-		
-		wait11.until(ExpectedConditions.visibilityOf(ElementApprovalConfiguration.approvalConfigurationAction));
-		
-		wait11.until(ExpectedConditions.elementToBeClickable(ElementApprovalConfiguration.approvalConfigurationAction));	
-	
-		
-		ElementApprovalConfiguration.configurationIcon.click();
-		
-		ElementApprovalConfiguration.masterIcon.click();
-	}
-	
-	
 
+		BasicOperation.wait(ElementApprovalConfiguration.approvalConfigurationAction);
+
+		BasicOperation.exception(ElementApprovalConfiguration.approvalConfigurationAction);
+
+		ElementApprovalConfiguration.approvalConfigurationApprove.click();
+
+		BasicOperation.wait(ElementApprovalConfiguration.approvalConfigurationAction);
+
+		ElementApprovalConfiguration.configurationIcon.click();
+
+		ElementApprovalConfiguration.masterIcon.click();
+
+		ElementApprovalConfiguration.homeIcon.click();
+
+		 
+	}
 
 }
