@@ -1112,8 +1112,7 @@ public static String aprovalReleaseSampleType="ARE St cmts 1";
 		
 	public static String supplierLotNumber="SLN001";
 	
-	public static String uni="cm";
-	
+ 
 	public static HashMap<String, String> userRoleTemplateTestGroup()
 	{
 		HashMap<String, String> userRoleTemplate=new HashMap<String, String>();

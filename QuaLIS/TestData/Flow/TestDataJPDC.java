@@ -2,6 +2,7 @@ package Flow;
 
 import java.util.HashMap;
 
+
 import Utility.BrowserOperation;
 
 public class TestDataJPDC extends BrowserOperation{
@@ -9,7 +10,6 @@ public class TestDataJPDC extends BrowserOperation{
 	public static String clientGroup="ìž…ë ¥í•˜ë©° cg";
 	
 	public static String client="ìž…ë ¥í•˜ë©° client";
-	
 	
 	public static String clientSite="ìž…ë ¥í•˜ë©° site";
 	
@@ -29,7 +29,7 @@ public class TestDataJPDC extends BrowserOperation{
 	
 	public static String test="ìž…ë ¥í•˜ë©° Test";
 	
-public static String telephoneNumber="ìž…ë ¥í•˜ë©° TN";
+	public static String telephoneNumber="ìž…ë ¥í•˜ë©° TN";
 	
 	public static String email="ìž…ë ¥í•˜ë©° em@";
 	

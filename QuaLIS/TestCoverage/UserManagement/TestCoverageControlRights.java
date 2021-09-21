@@ -28,6 +28,63 @@ public class TestCoverageControlRights extends ElementAuditTrail {
 	static int beforeCount;
 
 	static int screenGridCount;
+	
+	public static void controlRightsAddAll(String userRole, String screenName) throws InterruptedException
+	{
+		PageFactory.initElements(driver, ElementControlRights.class);
+		
+		BasicOperation.screenExpand(ElementControlRights.element());
+				
+		BasicOperation.selectByVisibleText( ElementControlRights.controlRightsFilterUserRole, userRole);
+
+		ElementControlRights.controlRightsFilterFind.click();
+		
+		BasicOperation.exception(ElementControlRights.controlRightsScreenIcon);
+		
+		
+		BrowserOperation.implicitWait(3);
+		
+		List<WebElement> screenList = ElementControlRights.controlRightsScreenList;
+
+		try {
+			screenList.get(0).click();
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
+		for(WebElement screen:screenList)
+		{
+			if(screen.getText().equals(screenName))
+			{
+				screen.click();
+			}
+			else
+			{
+				System.out.println("screen is not available");
+			}
+		}
+		
+		BasicOperation.exception(ElementControlRights.controlRightsAction);
+		
+		ElementControlRights.controlRightsAddRights.click();
+		
+		BasicOperation.exception(ElementControlRights.controlRightsSearchControl);
+	
+
+			if (ElementControlRights.controlRightsSelectAll.isDisplayed()) {
+
+				ElementControlRights.controlRightsSelectAll.click();
+
+				ElementControlRights.controlRightsAddSubmit.click();
+			} else {
+				ElementControlRights.controlRightsAddCancel.click();
+			}
+
+			BasicOperation.wait(ElementControlRights.controlRightsAction);
+			
+			BasicOperation.screenCollapse(ElementControlRights.element());
+	
+	}
 
 	public static void main(String[] args) throws IOException, InterruptedException, URISyntaxException {
 
@@ -62,54 +119,10 @@ public class TestCoverageControlRights extends ElementAuditTrail {
 		// List<WebElement>
 		// d=driver.findElements(By.xpath("//*[@id=\"ID_CTRL_CTRLRIGHTSData_129\"]/div/div[1]/p"));
 
-		List<WebElement> screenList = ElementControlRights.controlRightsScreenList;
-
-		List<WebElement> screenCheckboxList = ElementControlRights.controlRightsScreenCheckboxList;
-
-		
-
-	int n = screenList.size();
-
-	screenList.get(0).click();
-
-	for(
-	WebElement a:screenList)
-	{
-		a.click();
-
-		ElementControlRights.controlRightsAction.click();
-
-		ElementControlRights.controlRightsAddRights.click();
-
-		try {
-
-			if (ElementControlRights.controlRightsSearchControl.isEnabled()
-					|| ElementControlRights.controlRightsSearchControl.isDisplayed()) {
-				wait1.until(ExpectedConditions.visibilityOf(ElementControlRights.controlRightsSearchControl));
-
-				wait1.until(ExpectedConditions.elementToBeClickable(ElementControlRights.controlRightsSearchControl));
-
-				ElementControlRights.controlRightsSearchControl.click();
-
-			}
-
-		} catch (Exception e) {
-			Thread.sleep(2000);
-			ElementControlRights.controlRightsSearchControl.click();
-		}
-
-		if (ElementControlRights.controlRightsSelectAll.isDisplayed()) {
-
-			ElementControlRights.controlRightsSelectAll.click();
-
-			ElementControlRights.controlRightsAddSubmit.click();
-		} else {
-			ElementControlRights.controlRightsAddCancel.click();
-		}
-
+	
 	}
 
-	}
+	
 
 	public static void auditTrailAdd() throws IOException, InterruptedException, HeadlessException, AWTException {
 

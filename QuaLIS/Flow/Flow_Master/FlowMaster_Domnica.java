@@ -23,10 +23,13 @@ import Settings.ActiveStatus;
 import Settings.ParameterType;
 import Settings.RegistrationCategory;
 import Settings.RegistrationTypeDetail;
+import Settings.ScreenRightsScreenName;
 import TestGroup.TestCoverageTestGroup;
 import TestManagement.TestCoverageMethod;
 import TestManagement.TestCoverageMethodCategory;
 import TestManagement.TestCoverageTest;
+import UserManagement.TestCoverageControlRights;
+import UserManagement.TestCoverageScreenRights;
 import UserManagement.TestCoverageUser;
 import Utility.BasicOperation;
 import Utility.BrowserOperation;
@@ -41,11 +44,17 @@ public class FlowMaster_Domnica extends TestDataFlow
 	public static void domnica() throws IOException, InterruptedException, AWTException, URISyntaxException {
 
 		BrowserOperation.configProperties();
-		
+ 		
 		BrowserOperation.launchLIMS();
 		
 		TestCoverageFTPConfiguration.FTP();	
-
+				
+		TestCoverageScreenRights.screenRightsAddAll(BrowserOperation.userRole);
+		
+		TestCoverageControlRights.controlRightsAddAll(BrowserOperation.userRole, ScreenRightsScreenName.containerType);
+		
+		BrowserOperation.refreshLoginAdmin();
+		
 		MasterMethod.designation(designation, description);
 
 		MasterMethod.department(department, description);
@@ -92,7 +101,7 @@ public class FlowMaster_Domnica extends TestDataFlow
 		TestCoverageUser.userUserRoleAdd(approverLoginID, approver);
 
 		MasterMethod.organisation(department, lab, section);
-		
+	 	
 		TestCoverageContainerType.containerType(containerType, containerTypeDescription);	
 		
 		MasterMethod.unitOfMeasurement(unit, unitDescription);

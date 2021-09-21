@@ -1,9 +1,12 @@
 package UserManagement;
 
+import java.util.HashMap;
 import java.util.List;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+
+import Config.ElementName;
 
 public class ElementControlRights {
 	@FindBy(id = "iMenuID_1")
@@ -25,7 +28,8 @@ public class ElementControlRights {
 	public static WebElement controlRightsSideViewName;
 	
 
-	
+	@FindBy(xpath = "//*[@id=\"MenuTree\"]/li[1]/a")
+	public static WebElement homeIcon;
 	
 	
 	
@@ -80,7 +84,11 @@ public class ElementControlRights {
 	@FindBy(xpath = "//*[@id=\"ID_CTRL_ControlRightsgetdiv\"]/div")
 	public static List<WebElement> controlRightsScreenControlList;
 
+	@FindBy(xpath = "//*[@id=\"ID_CTRL_SCRControlRightsData\"]")
+	public static WebElement controlRightsScreenIcon;
 	
+	@FindBy(xpath = "//*[@id=\"ID_CTRL_ControlRightsData\"]")
+	public static WebElement controlRightsScreenControlIcon;
 
 	@FindBy(xpath = "//*[@id='ID_CTRL_ActionMenu']/a")
 	public static WebElement controlRightsAction;
@@ -102,6 +110,23 @@ public class ElementControlRights {
 
 	@FindBy(id = "ID_CTRL_CancelScreen_Button")
 	public static WebElement controlRightsAddCancel;
+	
+
+	public static HashMap<String, WebElement> element()
+	{
+		HashMap<String, WebElement> menu=new HashMap<String, WebElement>();
+		
+		menu.put(ElementName.module, masterIcon);
+		
+		menu.put(ElementName.subModule, userManagementIcon);
+		
+		menu.put(ElementName.home, homeIcon);
+		
+		menu.put(ElementName.screen, controlRightsIcon);
+		
+		return menu;
+		
+	}
 	
 	
 

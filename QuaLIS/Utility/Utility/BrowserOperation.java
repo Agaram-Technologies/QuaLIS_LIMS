@@ -47,6 +47,8 @@ public class BrowserOperation
 	
 	public static String passWord;
 	
+	public static String userRole;
+	
 	public static String latestChromeVersion;
 	
 	public static String FTPUserName;
@@ -107,6 +109,8 @@ public class BrowserOperation
 			FTPHost=properties.getProperty("FTPHost");
 			
 			project=properties.getProperty("project");
+			
+			userRole=properties.getProperty("userRole");
 						
 			System.out.println(latestChromeVersion);
 			
@@ -125,6 +129,8 @@ public class BrowserOperation
 			System.out.println(FTPFolder);
 			
 			System.out.println(project);
+			
+			  
 			
  	  
 					
@@ -289,8 +295,40 @@ public class BrowserOperation
 	}
 
 
-	public static void refreshLoginAdmin() {
-		// TODO Auto-generated method stub
+	public static void refreshLoginAdmin()
+	{
+		driver.navigate().refresh();
+		
+		PageFactory.initElements(driver, ElementProfile.class);
+
+
+		WebElement loginButton = ElementProfile.loginIcon;
+
+		List <WebElement>languageList = ElementProfile.languageList;
+
+		WebElement french = ElementProfile.language;
+
+		if (languageList.get(0).isDisplayed()) 
+		{
+
+			Select d=new Select(driver.findElement(By.id("sysLang")));
+			
+			d.selectByVisibleText("English");
+
+			ElementProfile.userName.sendKeys(userName);
+
+			ElementProfile.passWord.click();
+		}
+
+		List<WebElement> userRoleList = ElementProfile.userRoleList;
+
+		if (userRoleList.get(0).isDisplayed()) 
+		{
+			ElementProfile.passWord.sendKeys(passWord);
+
+			loginButton.click();
+
+		}
 		
 	}
 

@@ -227,4 +227,24 @@ public class RegistrationTypeDetail
 		return registrationSubTypeIDS;
 	}
 
+	public static  String registrationCategory(String registrationSubType)
+	{
+		String registrationCategory="";
+		
+			
+		if(registrationSubType.equals(RegistrationTypeDetail.registrationSubTypeInstrument))
+		{
+			registrationCategory=RegistrationCategory.instrument;
+		}
+	    else if(registrationSubType.equals(RegistrationTypeDetail.registrationSubTypeMaterial))
+		{
+	    	registrationCategory=RegistrationCategory.material;
+		}
+		else  
+		{
+			registrationCategory=RegistrationCategory.product;
+		}
+	
+		return registrationCategory;
+	}
 }

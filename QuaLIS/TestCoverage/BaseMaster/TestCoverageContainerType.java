@@ -132,8 +132,7 @@ public class TestCoverageContainerType extends BrowserOperation
 	
 	
 	
-	public static void containerType(String containerType, String description)
-			throws InterruptedException, IOException {
+	public static void containerType(String containerType, String description)	throws InterruptedException, IOException {
 
 		PageFactory.initElements(driver, ElementContainerType.class);
 
@@ -219,22 +218,24 @@ public class TestCoverageContainerType extends BrowserOperation
 			ElementContainerType.containerTypeAddSubmit.click();
 
 			wait1.until(ExpectedConditions.visibilityOf(ElementContainerType.containerTypeAction));
-
-			wait1.until(ExpectedConditions.elementToBeClickable(ElementContainerType.containerTypeAction));
-
-			wait1.until(ExpectedConditions.visibilityOf(ElementContainerType.containerTypeAction));
-
-			wait1.until(ExpectedConditions.elementToBeClickable(ElementContainerType.containerTypeAction));
-
 			
-		} catch (Exception e) {
+			ElementContainerType.baseMasterIcon.click();
+			
+			ElementContainerType.masterIcon.click();
+			
+			ElementContainerType.homeIcon.click();
+ 			
+		}
+		catch (Exception e) {
 			
 			ElementContainerType.baseMasterIcon.click();
 
 			ElementContainerType.masterIcon.click();
+			
+			ElementContainerType.homeIcon.click();
 			// TODO: handle exception
 		}
-
+		
 	
 		
 

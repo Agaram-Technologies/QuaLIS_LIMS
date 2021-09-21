@@ -15,7 +15,7 @@ import Utility.BrowserOperation;
 public class TestCoverageTemplateMaster extends BrowserOperation{
 	public static void templateMasterFlow(String sampleCategory,String materialCategory, String instrumentCategory,  String firstField) throws InterruptedException
 	{
-		//TestCoverageTemplateMaster.add(RegistrationCategory.product,sampleCategory,  firstField);
+		TestCoverageTemplateMaster.add(RegistrationCategory.product,sampleCategory,  firstField);
 		 
 		TestCoverageTemplateMaster.add(RegistrationCategory.instrument,instrumentCategory, firstField);		 
 		 

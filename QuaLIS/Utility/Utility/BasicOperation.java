@@ -35,6 +35,7 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -59,6 +60,7 @@ import BaseMaster.ElementSampleTestComments;
 import BaseMaster.ElementStorageCondition;
 import BaseMaster.ElementStorageLocation;
 import BaseMaster.ElementUnit;
+import Config.ElementName;
 import Config.SampleStatus;
 import Contacts.ElementCountry;
 import Esign.ElementEsign;
@@ -83,6 +85,25 @@ public class BasicOperation extends BrowserOperation{
 			}
 		}
 	}
+	
+	public static void screenExpand(HashMap<String, WebElement>menu)
+	{
+		 menu.get(ElementName.module).click();
+		 
+		 menu.get(ElementName.subModule).click();
+		 
+		 menu.get(ElementName.screen).click();
+	}
+	
+	public static void screenCollapse(HashMap<String, WebElement>menu)
+	{
+		 menu.get(ElementName.subModule).click();
+		 
+		 menu.get(ElementName.module).click();
+		 
+		 menu.get(ElementName.home).click();
+	}
+	
 	public static String jarPath(String className) throws URISyntaxException, ClassNotFoundException
 	{
 		Class c=Class.forName(className);  
