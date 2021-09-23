@@ -8,6 +8,8 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.HashMap;
 
+
+import org.apache.commons.collections4.map.HashedMap;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -103,7 +105,11 @@ public class TestCoverageUnit extends BrowserOperation {
 		return output;
 	
 	}
-
+	 public static void                  unitAddAllField(HashedMap <String, String> a)
+	{
+		// TODO Auto-generated method stub
+		
+	}
 	public static void unitEditDescriptionValueToValue(HashMap <String, String> value) throws InterruptedException
 	{
 		PageFactory.initElements(driver, ElementUnit.class);
@@ -171,5 +177,7 @@ public class TestCoverageUnit extends BrowserOperation {
 		
 		FunctionDelete.deleteMandatory(value, ElementUnit.element(), ElementUnit.list());		
 	}
+
+
 	
 }

@@ -275,3 +275,18 @@
 2021-09-23 13:40:20 INFO  Build:24 - All Pre Requisite folder is created
 2021-09-23 14:31:24 INFO  Build:24 - All Pre Requisite folder is created
 2021-09-23 14:31:45 INFO  Build:24 - All Pre Requisite folder is created
+2021-09-23 18:42:51 INFO  Build:24 - All Pre Requisite folder is created
+2021-09-23 18:43:00 INFO  Build:24 - All Pre Requisite folder is created
+2021-09-23 18:43:27 INFO  Build:24 - All Pre Requisite folder is created
+2021-09-23 18:43:36 INFO  FunctionAdd:24 - 1. Clicked the Master Icon
+2021-09-23 18:43:37 INFO  FunctionAdd:24 - 2. Clicked the Base Master Icon
+2021-09-23 18:43:37 INFO  FunctionAdd:24 - 3. Clicked the Container Type Icon
+2021-09-23 18:43:38 INFO  FunctionAdd:24 - 4. Opened the Container Type Screen
+2021-09-23 18:43:38 INFO  FunctionAdd:24 - 5. It shows 2 Container Type in Grid before Add
+2021-09-23 18:43:38 INFO  FunctionAdd:24 - 6. Clicked the action Button
+2021-09-23 18:43:38 INFO  FunctionAdd:24 - 7. Clicked the Add Button
+2021-09-23 18:43:39 INFO  FunctionAdd:24 - 8. Add popup is opened
+2021-09-23 18:43:39 INFO  FunctionAdd:24 - 9. Entered the name as containerType001AA
+2021-09-23 18:43:39 INFO  FunctionAdd:24 - 10. Entered the description as containerTypeDes001AA
+2021-09-23 18:43:39 INFO  FunctionAdd:24 - 11. Clicked the Add submit Button
+2021-09-23 18:43:54 ERROR FunctionAdd:35 - 12. Add Popup is not closed, It getting issue something
