@@ -311,3 +311,32 @@
 2021-09-24 11:08:29 INFO  Build:28 - All Pre Requisite folder is created
 2021-09-24 11:11:48 INFO  Build:28 - All Pre Requisite folder is created
 2021-09-24 11:12:01 INFO  Build:28 - All Pre Requisite folder is created
+2021-09-24 12:57:09 INFO  Build:28 - All Pre Requisite folder is created
+2021-09-24 12:57:16 INFO  FunctionAdd:28 - 1. Clicked the Master Icon
+2021-09-24 12:57:16 INFO  FunctionAdd:28 - 2. Clicked the Base Master Icon
+2021-09-24 12:57:17 INFO  FunctionAdd:28 - 3. Clicked the Container Type Icon
+2021-09-24 12:57:17 INFO  FunctionAdd:28 - 4. Opened the Container Type Screen
+2021-09-24 12:57:17 INFO  FunctionAdd:28 - 5. It shows 2 Container Type in Grid before Add
+2021-09-24 12:57:17 INFO  FunctionAdd:28 - 6. Clicked the action Button
+2021-09-24 12:57:17 INFO  FunctionAdd:28 - 7. Clicked the Add Button
+2021-09-24 12:57:18 INFO  FunctionAdd:28 - 8. Add popup is opened
+2021-09-24 12:57:18 INFO  FunctionAdd:28 - 9. Entered the name as containerType001AA
+2021-09-24 12:57:18 INFO  FunctionAdd:28 - 10. Entered the description as containerTypeDes001AA
+2021-09-24 12:57:18 INFO  FunctionAdd:28 - 11. Clicked the Add submit Button
+2021-09-24 12:57:21 INFO  FunctionAdd:28 - 12. Add Popup is closed
+2021-09-24 12:57:21 ERROR FunctionAdd:43 - undefined
+2021-09-24 12:57:21 INFO  FunctionAdd:28 - Entered name detail that containerType001AA is displayed in Grid
+2021-09-24 12:57:21 INFO  FunctionAdd:28 - Entered name detail tha tcontainerType001AA is displayed in First Index
+2021-09-24 12:57:22 INFO  FunctionAdd:28 - Entered description detail that containerTypeDes001AA is displayed in Grid 
+2021-09-24 12:57:22 INFO  FunctionAdd:28 - Entered description detail that containerTypeDes001AA displayed in First Index
+2021-09-24 12:57:22 INFO  FunctionAdd:28 - 1. Clicked the Master Icon
+2021-09-24 12:57:23 INFO  FunctionAdd:28 - 2. Clicked the Checklist Management Icon
+2021-09-24 12:57:23 INFO  FunctionAdd:28 - 3. Clicked the QB Category Icon
+2021-09-24 12:57:23 INFO  FunctionAdd:28 - 4. Opened the QB Category Screen
+2021-09-24 12:57:23 INFO  FunctionAdd:28 - 5. It shows 2 QB Category in Grid before Add
+2021-09-24 12:57:24 INFO  FunctionAdd:28 - 6. Clicked the action Button
+2021-09-24 12:57:24 INFO  FunctionAdd:28 - 7. Clicked the Add Button
+2021-09-24 12:57:24 INFO  FunctionAdd:28 - 8. Add popup is opened
+2021-09-24 12:57:24 INFO  FunctionAdd:28 - 9. Entered the name as QBCategory001AA
+2021-09-24 12:57:24 INFO  FunctionAdd:28 - 10. Entered the description as QBCategoryDes001AA
+2021-09-24 12:57:25 INFO  FunctionAdd:28 - 11. Clicked the Add submit Button

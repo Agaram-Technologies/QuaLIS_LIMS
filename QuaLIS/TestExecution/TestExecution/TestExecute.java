@@ -23,8 +23,7 @@ public class TestExecute
 
 	public static void main(String[] args)
 	{
-		new Button();
-		 
+		new Button();	 
 	}
 }
  
@@ -35,7 +34,7 @@ class Button
 
 		JFrame frame=new JFrame("QuaLIS");
 		
-		JLabel label=new JLabel("QuaLIS v1.0.8");
+		JLabel label=new JLabel("QuaLIS v1.0.7");
 		
 		frame.add(label);
 		
@@ -81,7 +80,7 @@ class Button
 			
 		frame.add(master);		
 				
-		JButton twoTerm=new JButton("Two Term Masser");
+		JButton twoTerm=new JButton("Two Term Master");
 			  	
 		twoTerm.setBounds(170, 300,width,50);
 			

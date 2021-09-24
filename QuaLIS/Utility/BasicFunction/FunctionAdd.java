@@ -21,6 +21,7 @@ import UserManagement.ElementDesignation;
 import Utility.BasicOperation;
 import Utility.BrowserOperation;
 import Utility.QuaLISLog;
+import Utility.ResultOutput;
 
 public class FunctionAdd extends ElementName {
 	
@@ -67,14 +68,8 @@ public class FunctionAdd extends ElementName {
 					
 			String resultModuleClick="1. Clicked the "+module+" Icon";
 			
-			BasicOperation.screenshot(resultModuleClick);
-
-			System.out.println(resultModuleClick);
-				
-			QuaLISLog.info(className, resultModuleClick);
-			
-			output.put(TwoTermOutput.moduleClick, resultModuleClick);
-			
+			ResultOutput.info(output, className, TwoTermOutput.moduleClick, resultModuleClick);
+ 			
 			try
 			{
 				
@@ -82,36 +77,24 @@ public class FunctionAdd extends ElementName {
 						
 				String resultSubModuleClick="2. Clicked the "+subModule+" Icon";
 				
-				BasicOperation.screenshot(resultSubModuleClick);
-
-				System.out.println(resultSubModuleClick);
-					
-				QuaLISLog.info(className, resultSubModuleClick);
-				
+				ResultOutput.info(output, className, TwoTermOutput.subModuleClick, resultSubModuleClick);
+ 				
 				try
 				{
 					BasicOperation.smallImplicitWaitClick(element.get(ElementName.screen));
 									 
 					String resultScreenClick="3. Clicked the "+screen+" Icon";
 					
-					BasicOperation.screenshot(resultScreenClick);
-
-					System.out.println(resultScreenClick);
-						
-					QuaLISLog.info(className, resultScreenClick);
-					
+					ResultOutput.info(output, className, TwoTermOutput.screenClick, resultScreenClick);
+ 					
 					try
 					{
 						BasicOperation.exception(element.get(ElementName.tabHeader));
  								
 						String resultScreenVisibilty="4. Opened the "+screen+" Screen";
 						
-						BasicOperation.screenshot(resultScreenVisibilty);
-
-						System.out.println(resultScreenVisibilty);
-							
-						QuaLISLog.info(className, resultScreenVisibilty);
-						
+						ResultOutput.info(output, className, TwoTermOutput.screenVisible, resultScreenVisibilty);
+				
 						try
 						{
 													

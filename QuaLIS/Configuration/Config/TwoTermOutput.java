@@ -2,34 +2,38 @@ package Config;
 
 public class TwoTermOutput
 {
-	public static String moduleClick="";
+	public static String moduleClick="moduleClick";
 	
-	public static String subModuleClick="";
+	public static String subModuleClick="subModuleClick";
 
-	public static String screenClick="";
-
-	public static String tabClick="";
-
-	public static String screenVisible="";
+	public static String screenClick="screenClick";
+  
+	public static String screenVisible="screenVisible";
 	
-	public static String beforeAddCount="";
+	public static String beforeAddCount="beforeAddCount";
 
-	public static String actionClick="";
+	public static String actionClick="actionClick";
 
-	public static String addClick="";
+	public static String addClick="addClick";
 	
-	public static String addPopupVisible="";
+	public static String addPopupVisible="addPopupVisible";
 
-	public static String enteredName="";
+	public static String enteredName="enteredName";
 
-	public static String enteredDescription="";
+	public static String enteredDescription="enteredDescription";
 
-	public static String popupClose="";
+	public static String popupClose="popupClose";
+	
+	public static String nameInGrid="nameInGrid";
+	
+	public static String descriptionInGrid="descriptionInGrid";
+	
+	public static String nameInFirstIndex="nameInFirstIndex";
 
-	public static String afterAddCount="";
+	public static String descriptionInFirstIndex="descriptionInFirstIndex";
+
+	public static String afterAddCount="afterAddCount";
 	
 	public static String resultFlag="resultFlag";
 	
-	
-
 }
